@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'Noto Serif', Georgia, serif;
+  --font-sans: 'Inter', 'Helvetica Neue', Helvetica, sans-serif;
+  --color-brand: #4A6B3F;
+  --color-brand-dark: #3a5431;
+  --color-grey-50: #fbfbfb;
+  --color-grey-100: #f5f5f5;
+  --color-grey-200: #ededed;
+  --color-grey-500: #666666;
+  --color-grey-700: #333333;
+  --color-grey-900: #1a1a1a;
+  
+  --spacing-nav: 80px;
+  --spacing-nav-scrolled: 70px;
+}
+
+@layer base {
+  html { 
+    @apply scroll-smooth antialiased;
+  }
+
+  body {
+    @apply font-serif font-light text-grey-900 bg-white overflow-x-hidden selection:bg-brand selection:text-white;
+  }
+
+  h1, h2, h3, h4 {
+    @apply tracking-tight;
+  }
+
+  /* Optimized Typography Scale */
+  .display-1 { @apply text-6xl md:text-8xl lg:text-9xl leading-[0.9] font-serif; }
+  .display-2 { @apply text-5xl md:text-7xl lg:text-8xl leading-[0.9] font-serif; }
+}
+
+@layer components {
+  /* ─── NAVIGATION ─────────────────────────────────────── */
+  .nav-link {
+    @apply text-[0.7rem] tracking-[0.2em] lg:tracking-[0.3em] uppercase relative transition-all duration-500 font-sans whitespace-nowrap opacity-70 hover:opacity-100;
+  }
+  .nav-link::after {
+    @apply content-[''] absolute -bottom-1 left-0 w-0 h-px bg-current transition-all duration-500 ease-out;
+  }
+  .nav-link:hover::after { @apply w-full; }
+
+  /* ─── BUTTONS ────────────────────────────────────────── */
+  .btn {
+    @apply text-[0.65rem] tracking-[0.3em] font-sans font-medium uppercase px-12 py-4 transition-all duration-500 inline-flex items-center justify-center border cursor-pointer rounded-full relative overflow-hidden active:scale-95;
+  }
+  
+  .btn-white { 
+    @apply bg-white text-black border-transparent hover:bg-black hover:text-white; 
+  }
+  .btn-outline-white { 
+    @apply border-white/30 text-white hover:bg-white hover:text-black; 
+  }
+  .btn-brand { 
+    @apply bg-brand text-white border-transparent hover:bg-brand-dark; 
+  }
+  .btn-outline-brand { 
+    @apply border-brand/30 text-brand hover:bg-brand hover:text-white; 
+  }
+
+  /* ─── REVEAL ANIMATION ───────────────────────────────── */
+  .reveal {
+    @apply opacity-0 translate-y-12 blur-[2px] transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)];
+  }
+  .reveal.visible {
+    @apply opacity-100 translate-y-0 blur-none;
+  }
+
+  /* ─── SPLIT PANELS ───────────────────────────────────── */
+  .split-panel {
+    @apply flex-1 relative overflow-hidden transition-all duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)];
+  }
+  .split-panel:hover { @apply flex-[1.4]; }
+  .split-bg {
+    @apply absolute inset-0 w-full h-full object-cover transition-transform duration-[1.5s] ease-out;
+  }
+  .split-panel:hover .split-bg { @apply scale-105; }
+
+  /* ─── FORMS ──────────────────────────────────────────── */
+  .form-input {
+    @apply w-full bg-transparent border-b border-grey-200 py-5 outline-none transition-all duration-500 focus:border-brand font-serif font-light text-base placeholder:opacity-30;
+  }
+
+  /* ─── CARDS ──────────────────────────────────────────── */
+  .service-card {
+    @apply bg-white p-10 border border-grey-100 rounded-3xl transition-all duration-700 hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.08)] hover:-translate-y-2;
+  }
+
+  /* ─── GLASSMORPHISM ──────────────────────────────────── */
+  .glass {
+    @apply bg-white/10 backdrop-blur-xl border border-white/10;
+  }
+  .glass-dark {
+    @apply bg-black/40 backdrop-blur-2xl border border-white/5;
+  }
+  .glass-card {
+    @apply bg-white/60 backdrop-blur-xl border border-white/20 shadow-2xl rounded-[2.5rem];
+  }
+
+  .glass-nav {
+    @apply backdrop-blur-md border-b border-white/10;
+  }
+}
+
+/* ─── CUSTOM UTILS ───────────────────────────────────── */
+.line-mask { @apply block overflow-hidden; }
+
+.loader-logo {
+  @apply w-32 md:w-48 h-auto invert brightness-0;
+}
+
+#loader {
+  @apply fixed inset-0 bg-black z-[3000] flex items-center justify-center;
+}
+
+.whatsapp-float {
+  @apply fixed bottom-8 right-8 z-[500] w-14 h-14 bg-brand rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-110 hover:bg-[#25D366] fill-white p-3.5;
+}
+
+@media (max-width: 768px) {
+  .split-panel:hover { @apply flex-1; }
+  .whatsapp-float { @apply bottom-6 right-6 w-12 h-12 p-3; }
+}

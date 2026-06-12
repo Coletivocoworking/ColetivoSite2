@@ -1,0 +1,212 @@
+import React, { useEffect } from 'react';
+import { motion } from 'motion/react';
+import { FAQ } from '../components/FAQ';
+import { MapPin, Phone, Mail, Clock, Shield, Coffee, Wifi, Users, Layout as LayoutIcon, Trees } from 'lucide-react';
+
+export default function Casa62() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          revealObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach((el) => revealObs.observe(el));
+    return () => revealObs.disconnect();
+  }, []);
+
+  const galleries = [
+    "http://coletivo.cc/wp-content/uploads/2025/06/6.jpg",
+    "http://coletivo.cc/wp-content/uploads/2025/06/2.jpg",
+    "http://coletivo.cc/wp-content/uploads/2025/03/Design-sem-nome-4.jpg",
+    "http://coletivo.cc/wp-content/uploads/2025/06/1.jpg"
+  ];
+
+  return (
+    <div className="bg-[#F9F8F6] text-[#1a1a1a]">
+      {/* ─── HERO ─── */}
+      <section className="relative min-h-screen flex items-center pt-32 pb-20 px-6 md:px-16 overflow-hidden bg-black text-white">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="http://coletivo.cc/wp-content/uploads/2025/06/6.jpg" 
+            alt="Casa 62" 
+            className="w-full h-full object-cover opacity-40 scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/40 to-black/90" />
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto w-full">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+            className="max-w-4xl space-y-12"
+          >
+            <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-bold italic">Unidade 01: Nossa Primeira Unidade</div>
+            <h1 className="display-1 text-white leading-[0.8] mb-10 tracking-tighter">
+              Casa 62. <br />
+              <span className="italic text-brand font-light font-serif">História & Alma.</span>
+            </h1>
+            <p className="font-serif font-light text-white/50 text-lg md:text-2xl max-w-2xl leading-relaxed">
+              Onde a história da arquitetura encontra o movimento do mundo dos negócios atual. Uma casa histórica reformada para ajudar você a crescer.
+            </p>
+            <div className="flex flex-wrap gap-8 pt-6">
+              <button className="btn btn-brand h-16 px-16 text-lg" onClick={() => (window as any).openModal?.('Casa 62')}>Agendar Visita</button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ─── SOBRE A UNIDADE ─── */}
+      <section id="sobre" className="py-32 md:py-64 px-6 md:px-16 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 xl:gap-32 items-center text-left">
+          <div className="reveal space-y-12">
+            <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-bold italic font-bold">Uma Casa Histórica</div>
+            <h2 className="font-serif text-4xl md:text-7xl text-grey-900 leading-[0.9] tracking-tighter">Um ícone da <br /><span className="italic text-brand font-light">nossa arquitetura.</span></h2>
+            <div className="space-y-8 font-serif font-light text-grey-500 text-lg md:text-xl leading-relaxed italic leading-relaxed">
+              <p>
+                Projetada em 1965 por um grande arquiteto uruguaio, a Casa 62 é o coração do Coletivo. Localizada no bairro Petrópolis, ela representa o equilíbrio perfeito entre a força do passado e as facilidades do futuro.
+              </p>
+              <p>
+                Com mais de 1.500m², o espaço foi cuidadosamente reformado para preservar seus detalhes originais — como os vitrais e as escadarias de madeira — trazendo toda a tecnologia que você precisa para trabalhar bem.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 gap-16 pt-12 border-t border-grey-100">
+              <div className="space-y-4">
+                <p className="text-[0.6rem] uppercase tracking-[0.3em] text-grey-400 font-sans font-bold italic">Espaço para Pessoas</p>
+                <p className="font-serif text-4xl text-grey-900">+200 Profissionais</p>
+              </div>
+              <div className="space-y-4">
+                <p className="text-[0.6rem] uppercase tracking-[0.3em] text-grey-400 font-sans font-bold italic">Tamanho Total</p>
+                <p className="font-serif text-4xl text-grey-900">1.500 m²</p>
+              </div>
+            </div>
+          </div>
+          <div className="reveal relative group">
+            <div className="absolute -inset-8 bg-brand/5 rounded-[4rem] rotate-3 group-hover:rotate-0 transition-all duration-[2s] ease-out" />
+            <div className="relative rounded-[3.5rem] overflow-hidden shadow-2xl">
+              <img 
+                src="http://coletivo.cc/wp-content/uploads/2025/06/2.jpg" 
+                alt="Interior Casa 62" 
+                className="w-full aspect-[4/5] object-cover transition-all duration-[2s] group-hover:scale-[1.05]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-grey-900/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── INFRAESTRUTURA ─── */}
+      <section className="py-32 md:py-64 px-6 md:px-16 bg-grey-900 text-white relative">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(74,107,63,0.05)_0%,transparent_70%)] pointer-events-none" />
+        <div className="max-w-7xl mx-auto relative z-10 text-left">
+          <div className="max-w-3xl mb-32 reveal">
+            <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] mb-8 font-bold font-sans italic">Tudo o que oferecemos</div>
+            <h2 className="font-serif text-4xl md:text-7xl leading-[0.9] tracking-tighter">Tudo o que <br /><span className="italic text-brand font-light">sua empresa precisa.</span></h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 xl:gap-16">
+            {[
+              { icon: <LayoutIcon size={28} />, title: "37 Salas Privativas", desc: "Ambientes fechados para equipes de 1 a 8 profissionais com bom isolamento de som." },
+              { icon: <Shield size={28} />, title: "Salas de Reunião", desc: "Duas salas completas para reuniões importantes." },
+              { icon: <Users size={28} />, title: "Estações Fixas", desc: "24 lugares exclusivos em um ambiente compartilhado com muito foco." },
+              { icon: <Wifi size={28} />, title: "Estações Rotativas", desc: "18 lugares flexíveis para quem busca parcerias com outros negócios." },
+              { icon: <Trees size={28} />, title: "Eventos", desc: "Espaço para até 25 pessoas perto de nossos jardins." },
+              { icon: <Coffee size={28} />, title: "Nossa Copa", desc: "Área de café com grãos selecionados e lanches especiais." }
+            ].map((item, i) => (
+              <div key={i} className="reveal group space-y-8" style={{ transitionDelay: `${i * 0.1}s` }}>
+                <div className="w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center text-brand transition-all duration-700 group-hover:bg-brand group-hover:text-white group-hover:rotate-6 group-hover:scale-110 shadow-lg">{item.icon}</div>
+                <div className="space-y-4">
+                  <h3 className="font-serif text-2xl text-white tracking-tight group-hover:text-brand transition-colors">{item.title}</h3>
+                  <p className="text-white/30 text-base font-serif font-light leading-relaxed max-w-sm">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── GALERIA ─── */}
+      <section className="py-32 md:py-64 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 md:px-16 mb-24 reveal text-left">
+          <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] mb-8 font-bold font-sans italic">Identidade Visual</div>
+          <h2 className="font-serif text-4xl md:text-7xl text-black leading-[0.8] tracking-tighter">Galeria de <br /><span className="italic text-brand font-light font-serif">Espaços.</span></h2>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-6">
+          {galleries.map((img, i) => (
+            <motion.div 
+              key={i}
+              className="reveal aspect-[3/4]"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+            >
+              <img src={img} alt={`Gallery ${i}`} className="w-full h-full object-cover rounded-[2.5rem] transition-all duration-[1s] cursor-pointer hover:scale-105" />
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* ─── LOCALIZAÇÃO ─── */}
+      <section className="py-32 md:py-64 px-6 md:px-16 bg-[#0a0a0a] text-white overflow-hidden relative">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(138,43,226,0.1)_0%,transparent_50%)] pointer-events-none" />
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 xl:gap-32 items-center text-left">
+          <div className="reveal order-2 lg:order-1">
+             <div className="bg-white/5 backdrop-blur-3xl rounded-[4rem] p-12 md:p-16 border border-white/10 space-y-16 shadow-2xl">
+               <div className="flex gap-8 items-start group">
+                  <div className="w-16 h-16 bg-brand rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-500">
+                    <MapPin size={32} className="text-white" />
+                  </div>
+                  <div className="space-y-2 pt-2">
+                    <h3 className="font-serif text-3xl tracking-tight leading-none text-white">Onde estamos</h3>
+                    <p className="text-white/40 font-serif font-light text-lg italic leading-relaxed">Rua Jaime Telles, 62 — Petrópolis, Porto Alegre/RS</p>
+                  </div>
+               </div>
+               <div className="flex gap-8 items-start group">
+                  <div className="w-16 h-16 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center flex-shrink-0 text-brand shadow-lg group-hover:bg-brand group-hover:text-white transition-all duration-500 group-hover:scale-110">
+                    <Clock size={32} />
+                  </div>
+                  <div className="space-y-2 pt-2">
+                    <h3 className="font-serif text-3xl tracking-tight leading-none text-white">Funcionamento</h3>
+                    <p className="text-white/40 font-serif font-light text-lg italic leading-relaxed">Segunda a Sexta: 08:30 às 18:30 <br /> <span className="text-brand font-bold not-italic font-sans text-sm tracking-widest uppercase mt-2 block">Acesso 24/7 para Residentes</span></p>
+                  </div>
+               </div>
+               <div className="flex gap-8 items-start group">
+                  <div className="w-16 h-16 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center flex-shrink-0 text-brand shadow-lg group-hover:bg-brand group-hover:text-white transition-all duration-500 group-hover:scale-110">
+                    <Phone size={32} />
+                  </div>
+                  <div className="space-y-2 pt-2">
+                    <h3 className="font-serif text-3xl tracking-tight leading-none text-white">Contato Direto</h3>
+                    <p className="text-white/40 font-serif font-light text-lg italic leading-relaxed">(51) 3517-3806 <br /> hello@coletivo.cc</p>
+                  </div>
+               </div>
+             </div>
+          </div>
+          <div className="reveal order-1 lg:order-2 space-y-12">
+            <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-bold italic">Localização Estratégica</div>
+            <h2 className="font-serif text-4xl md:text-7xl leading-[0.9] tracking-tighter">No coração do <br /><span className="italic text-brand font-light font-serif">Petrópolis.</span></h2>
+            <p className="font-serif font-light text-white/40 text-lg md:text-2xl leading-relaxed lg:max-w-md italic">
+              Uma localização privilegiada, cercada por facilidades e com fácil acesso aos principais lugares da cidade. O endereço ideal para sua marca.
+            </p>
+            <div className="pt-10">
+              <button 
+                className="btn btn-brand h-18 px-14 text-lg shadow-xl shadow-brand/20 transition-all duration-500"
+                onClick={() => (window as any).openModal?.('Visita Casa 62')}
+              >
+                Agendar Visita
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── FAQ ─── */}
+      <FAQ />
+    </div>
+  );
+}
