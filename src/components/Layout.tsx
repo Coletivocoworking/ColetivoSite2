@@ -171,8 +171,7 @@ export default function Layout({ children }: LayoutProps) {
     },
     { name: 'Somos Coletivo', path: '/sobre' },
     { name: 'Comunidade', path: '/comunidade' },
-    { name: 'Empresas', path: '/empresas' },
-    { name: 'Investidores', path: '/investidores' }
+    { name: 'Empresas', path: '/empresas' }
   ];
 
   return (
