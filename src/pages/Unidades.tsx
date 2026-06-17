@@ -41,7 +41,7 @@ export default function Unidades() {
       <section id="unidades-hero" className="relative min-h-screen flex items-center pt-32 md:pt-40 pb-20 px-6 md:px-16 overflow-hidden bg-grey-900">
         <div className="absolute inset-0 z-0 opacity-20">
           <img 
-            src="http://coletivo.cc/wp-content/uploads/2025/03/Design-sem-nome-4.jpg" 
+            src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/03/Design-sem-nome-4.jpg" 
             alt="Unidades Coletivo" 
             className="w-full h-full object-cover scale-105"
           />
@@ -85,7 +85,7 @@ export default function Unidades() {
             <div className="lg:col-span-7 relative reveal cursor-pointer group" onClick={() => navigate('/unidades/casa-62')}>
               <div className="aspect-[4/5] md:aspect-[16/10] overflow-hidden rounded-3xl shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)]">
                 <img 
-                  src="http://coletivo.cc/wp-content/uploads/2025/06/1.jpg" 
+                  src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/1.jpg" 
                   alt="Casa 62 Fachada" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.5s] ease-out"
                 />
@@ -186,7 +186,7 @@ export default function Unidades() {
             <div className="lg:col-span-7 relative order-1 lg:order-2 reveal cursor-pointer group" style={{ transitionDelay: '.2s' }} onClick={() => navigate('/unidades/area-51')}>
               <div className="aspect-[4/5] md:aspect-[16/10] overflow-hidden rounded-3xl shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)]">
                 <img 
-                  src="http://coletivo.cc/wp-content/uploads/2025/03/Design-sem-nome-4.jpg" 
+                  src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/03/Design-sem-nome-4.jpg" 
                   alt="Area 51 Interior" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.5s] ease-out"
                 />

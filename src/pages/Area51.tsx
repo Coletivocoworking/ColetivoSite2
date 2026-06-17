@@ -20,7 +20,7 @@ export default function Area51() {
   }, []);
 
   const galleries = [
-    "http://coletivo.cc/wp-content/uploads/2025/03/Design-sem-nome-4.jpg",
+    "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/03/Design-sem-nome-4.jpg",
     "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200",
     "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=1200",
     "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=1200"
@@ -32,7 +32,7 @@ export default function Area51() {
       <section className="relative min-h-screen flex items-center pt-32 pb-20 px-6 md:px-16 overflow-hidden bg-grey-900 text-white">
         <div className="absolute inset-0 z-0">
           <img 
-            src="http://coletivo.cc/wp-content/uploads/2025/03/Design-sem-nome-4.jpg" 
+            src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/03/Design-sem-nome-4.jpg" 
             alt="Area 51" 
             className="w-full h-full object-cover opacity-40 scale-105"
           />

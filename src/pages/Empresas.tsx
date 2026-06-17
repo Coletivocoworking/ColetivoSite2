@@ -38,7 +38,7 @@ export default function Empresas() {
       <section id="empresas-hero" className="relative min-h-[80vh] flex items-center justify-center px-6 pt-32 pb-24 bg-grey-900 overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="http://coletivo.cc/wp-content/uploads/2024/09/DSC01993-scaled.jpg" 
+            src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2024/09/DSC01993-scaled.jpg" 
             className="w-full h-full object-cover opacity-25 scale-105 filter grayscale"
             alt="Ambiente Acolhedor do Coletivo"
           />
@@ -216,7 +216,7 @@ export default function Empresas() {
             <div className="lg:col-span-12 xl:col-span-7 reveal">
               <div className="aspect-[16/10] rounded-[3rem] overflow-hidden shadow-2xl relative group">
                 <img 
-                  src="http://coletivo.cc/wp-content/uploads/2026/05/AREA_51_0495-2-scaled.jpg" 
+                  src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/05/AREA_51_0495-2-scaled.jpg" 
                   className="w-full h-full object-cover transition-transform duration-[2s] ease-out group-hover:scale-105"
                   alt="Lounge do Coletivo"
                 />

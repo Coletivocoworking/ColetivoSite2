@@ -45,19 +45,19 @@ export default function SalaReuniao() {
       title: "Sala de Decisões", 
       capacity: "Até 14 pessoas", 
       desc: "Perfeita para reuniões importantes e apresentações para investidores. Mesa grande e confortável.",
-      img: "http://coletivo.cc/wp-content/uploads/2025/06/6.jpg"
+      img: "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/6.jpg"
     },
     { 
       title: "Sala para Conversas", 
       capacity: "2 a 4 pessoas", 
       desc: "Lugar reservado para entrevistas ou reuniões rápidas com poucas pessoas.",
-      img: "http://coletivo.cc/wp-content/uploads/2025/06/2.jpg"
+      img: "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/2.jpg"
     },
     { 
       title: "Sala de Criação", 
       capacity: "Até 8 pessoas", 
       desc: "Sala com paredes para escrever e móveis que você pode mudar de lugar como quiser.",
-      img: "http://coletivo.cc/wp-content/uploads/2025/06/4.jpg"
+      img: "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/4.jpg"
     }
   ];
 
@@ -67,7 +67,7 @@ export default function SalaReuniao() {
       <section className="relative min-h-screen flex items-center pt-32 pb-20 px-6 md:px-16 overflow-hidden bg-grey-900">
         <div className="absolute inset-0 z-0 h-full w-full overflow-hidden">
           <img 
-            src="http://coletivo.cc/wp-content/uploads/2025/06/6.jpg" 
+            src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/6.jpg" 
             alt="Salas de Reunião Coletivo" 
             className="w-full h-full object-cover opacity-20 scale-105"
           />
@@ -130,7 +130,7 @@ export default function SalaReuniao() {
           <div className="reveal relative">
             <div className="aspect-square rounded-[4rem] overflow-hidden shadow-2xl relative border-[12px] border-grey-50 group">
               <img 
-                src="http://coletivo.cc/wp-content/uploads/2025/06/6.jpg" 
+                src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/6.jpg" 
                 alt="Sala de Reunião Board" 
                 className="w-full h-full object-cover transition-all duration-[2s] ease-out group-hover:scale-105"
               />

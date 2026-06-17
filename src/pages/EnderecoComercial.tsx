@@ -74,7 +74,7 @@ export default function EnderecoComercial() {
       <section className="relative min-h-screen flex items-center pt-32 pb-20 px-6 md:px-16 overflow-hidden bg-grey-900 text-white">
         <div className="absolute inset-0 z-0 h-full w-full overflow-hidden">
           <img 
-            src="http://coletivo.cc/wp-content/uploads/2025/03/Design-sem-nome-4.jpg" 
+            src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/03/Design-sem-nome-4.jpg" 
             alt="Endereço Comercial Coletivo" 
             className="w-full h-full object-cover opacity-20 scale-105"
           />
@@ -141,7 +141,7 @@ export default function EnderecoComercial() {
              <div className="grid grid-cols-2 gap-8">
               <div className="space-y-12 mt-16">
                 <div className="aspect-[4/5] rounded-[3.5rem] overflow-hidden shadow-2xl group border-[12px] border-grey-50">
-                  <img src="http://coletivo.cc/wp-content/uploads/2025/06/6.jpg" className="w-full h-full object-cover transition-all duration-[2s] ease-out group-hover:scale-105" alt="Unidade Casa 62" />
+                  <img src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/6.jpg" className="w-full h-full object-cover transition-all duration-[2s] ease-out group-hover:scale-105" alt="Unidade Casa 62" />
                 </div>
                 <div className="p-12 bg-brand text-white rounded-[3rem] shadow-2xl transform -rotate-2">
                   <MapPin size={24} className="mb-4 opacity-50" />
@@ -156,7 +156,7 @@ export default function EnderecoComercial() {
                   <p className="text-[0.6rem] uppercase tracking-widest text-grey-400 font-sans font-normal leading-none">Bela Vista</p>
                 </div>
                 <div className="aspect-[4/5] rounded-[3.5rem] overflow-hidden shadow-2xl group border-[12px] border-grey-50">
-                  <img src="http://coletivo.cc/wp-content/uploads/2025/06/1.jpg" className="w-full h-full object-cover transition-all duration-[2s] ease-out group-hover:scale-105" alt="Unidade Area 51" />
+                  <img src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/1.jpg" className="w-full h-full object-cover transition-all duration-[2s] ease-out group-hover:scale-105" alt="Unidade Area 51" />
                 </div>
               </div>
             </div>

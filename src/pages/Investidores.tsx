@@ -9,7 +9,7 @@ const Investidores = () => {
       <section id="investidores-hero" className="relative h-[80vh] flex items-center px-6 md:px-16 overflow-hidden bg-black">
         <div className="absolute inset-0 z-0 opacity-40">
           <img 
-            src="http://coletivo.cc/wp-content/uploads/2026/05/AREA_51_0022-scaled.jpg" 
+            src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/05/AREA_51_0022-scaled.jpg" 
             className="w-full h-full object-cover" 
             alt="Investidores" 
           />
@@ -117,7 +117,7 @@ const Investidores = () => {
             <div className="relative">
               <div className="aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl relative z-10">
                 <img 
-                  src="http://coletivo.cc/wp-content/uploads/2026/05/AREA_51_0015-scaled.jpg" 
+                  src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/05/AREA_51_0015-scaled.jpg" 
                   className="w-full h-full object-cover" 
                   alt="Marketing no Coletivo" 
                 />

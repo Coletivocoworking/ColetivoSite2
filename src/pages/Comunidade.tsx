@@ -36,25 +36,25 @@ export default function Comunidade() {
       icon: <Wind size={20} />,
       title: "Yoga no Jardim",
       desc: "Aulas toda semana para começar o dia com mais energia e foco.",
-      img: "http://coletivo.cc/wp-content/uploads/2026/05/Yoga.png"
+      img: "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/05/Yoga.png"
     },
     {
       icon: <Coffee size={20} />,
       title: "Café Especial",
       desc: "Cafés selecionados para você fazer uma pausa e recarregar as energias.",
-      img: "http://coletivo.cc/wp-content/uploads/2026/05/Cafe.png"
+      img: "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/05/Cafe.png"
     },
     {
       icon: <VolumeX size={20} />,
       title: "Cantinhos de Foco",
       desc: "Espaços silenciosos para você trabalhar com foco total e sem interrupções.",
-      img: "http://coletivo.cc/wp-content/uploads/2026/05/Canto-Foco.png"
+      img: "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/05/Canto-Foco.png"
     },
     {
       icon: <Leaf size={20} />,
       title: "Natureza por Perto",
       desc: "Espaços que unem o conforto de dentro com a beleza dos nossos jardins.",
-      img: "http://coletivo.cc/wp-content/uploads/2026/05/Natureza.png"
+      img: "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/05/Natureza.png"
     }
   ];
 
@@ -92,7 +92,7 @@ export default function Comunidade() {
       title: "Dia da Fruta", 
       desc: "Coloridas, refrescantes e cheias de nutrientes, além de deliciosas, são fontes naturais de vitaminas, fibras e antioxidantes que ajudam no bem-estar e na qualidade de vida.",
       cta: "PARTICIPAR",
-      img: "http://coletivo.cc/wp-content/uploads/2026/06/1.png",
+      img: "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/06/1.png",
     },
     { 
       type: "cuca",
@@ -100,7 +100,7 @@ export default function Comunidade() {
       dateText: "Dia 17 de Junho (Quarta-feira)",
       desc: "Disponível nas copas do Coletivo",
       cta: "VER DETALHES",
-      img: "http://coletivo.cc/wp-content/uploads/2026/06/2.png",
+      img: "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/06/2.png",
     },
     { 
       type: "massage",
@@ -108,7 +108,7 @@ export default function Comunidade() {
       subtitle: "GS Massoterapia",
       instagram: "@gs_massoterapia",
       cta: "AGENDAR HORÁRIO",
-      img: "http://coletivo.cc/wp-content/uploads/2026/06/3.png",
+      img: "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/06/3.png",
     },
     { 
       type: "arraia",
@@ -117,7 +117,7 @@ export default function Comunidade() {
       month: "JUNHO",
       time: "19 HORAS",
       cta: "CONFIRMAR PRESENÇA",
-      img: "http://coletivo.cc/wp-content/uploads/2026/06/4.png",
+      img: "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/06/4.png",
     }
   ];
 
@@ -127,7 +127,7 @@ export default function Comunidade() {
       <section id="comunidade-hero" className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden bg-grey-900">
         <div className="absolute inset-0 z-0 opacity-40">
           <img 
-            src="http://coletivo.cc/wp-content/uploads/2025/03/Design-sem-nome-4.jpg" 
+            src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/03/Design-sem-nome-4.jpg" 
             alt="Jardim Coletivo" 
             className="w-full h-full object-cover scale-110"
           />
@@ -247,21 +247,21 @@ export default function Comunidade() {
             }}
           >
             {[
-              "http://coletivo.cc/wp-content/uploads/2026/05/AREA_51_0079-scaled.jpg",
-              "http://coletivo.cc/wp-content/uploads/2026/05/AREA_51_0062-scaled.jpg",
-              "http://coletivo.cc/wp-content/uploads/2026/05/AREA_51_0022-scaled.jpg",
-              "http://coletivo.cc/wp-content/uploads/2026/05/AREA_51_0003-scaled.jpg",
-              "http://coletivo.cc/wp-content/uploads/2026/05/AREA_51_0015-scaled.jpg",
-              "http://coletivo.cc/wp-content/uploads/2026/05/2.jpg",
-              "http://coletivo.cc/wp-content/uploads/2026/05/4.jpg",
+              "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/05/AREA_51_0079-scaled.jpg",
+              "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/05/AREA_51_0062-scaled.jpg",
+              "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/05/AREA_51_0022-scaled.jpg",
+              "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/05/AREA_51_0003-scaled.jpg",
+              "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/05/AREA_51_0015-scaled.jpg",
+              "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/05/2.jpg",
+              "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/05/4.jpg",
               // Repeat for seamless loop
-              "http://coletivo.cc/wp-content/uploads/2026/05/AREA_51_0079-scaled.jpg",
-              "http://coletivo.cc/wp-content/uploads/2026/05/AREA_51_0062-scaled.jpg",
-              "http://coletivo.cc/wp-content/uploads/2026/05/AREA_51_0022-scaled.jpg",
-              "http://coletivo.cc/wp-content/uploads/2026/05/AREA_51_0003-scaled.jpg",
-              "http://coletivo.cc/wp-content/uploads/2026/05/AREA_51_0015-scaled.jpg",
-              "http://coletivo.cc/wp-content/uploads/2026/05/2.jpg",
-              "http://coletivo.cc/wp-content/uploads/2026/05/4.jpg"
+              "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/05/AREA_51_0079-scaled.jpg",
+              "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/05/AREA_51_0062-scaled.jpg",
+              "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/05/AREA_51_0022-scaled.jpg",
+              "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/05/AREA_51_0003-scaled.jpg",
+              "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/05/AREA_51_0015-scaled.jpg",
+              "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/05/2.jpg",
+              "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/05/4.jpg"
             ].map((img, i) => (
               <div 
                 key={i} 
@@ -335,7 +335,7 @@ export default function Comunidade() {
       <section className="relative py-40 md:py-64 px-6 md:px-16 overflow-hidden bg-grey-900 text-center">
         <div className="absolute inset-0 z-0 opacity-10">
           <img 
-            src="http://coletivo.cc/wp-content/uploads/2025/03/Design-sem-nome-4.jpg" 
+            src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/03/Design-sem-nome-4.jpg" 
             alt="Newsletter Background" 
             className="w-full h-full object-cover blur-[4px] scale-110"
           />
