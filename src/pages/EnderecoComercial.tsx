@@ -116,7 +116,7 @@ export default function EnderecoComercial() {
       <section className="py-32 md:py-64 px-6 md:px-16 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 xl:gap-32 items-center">
           <div className="reveal space-y-12 text-left">
-            <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-bold">Sua Empresa Bem Vista</div>
+            <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-normal">Sua Empresa Bem Vista</div>
             <h2 className="font-serif text-4xl md:text-7xl text-grey-900 leading-[0.9] tracking-tighter">
               A importância de <br />
               <span className="italic text-brand font-light uppercase text-3xl md:text-5xl tracking-[0.2em] block mt-4">um bom endereço.</span>
@@ -146,14 +146,14 @@ export default function EnderecoComercial() {
                 <div className="p-12 bg-brand text-white rounded-[3rem] shadow-2xl transform -rotate-2">
                   <MapPin size={24} className="mb-4 opacity-50" />
                   <h4 className="font-serif text-2xl mb-1 tracking-tight">Casa 62</h4>
-                  <p className="text-[0.6rem] uppercase tracking-widest opacity-50 font-sans font-bold leading-none">Moinhos de Vento</p>
+                  <p className="text-[0.6rem] uppercase tracking-widest opacity-50 font-sans font-normal leading-none font-sans">Moinhos de Vento</p>
                 </div>
               </div>
               <div className="space-y-12">
                 <div className="p-12 bg-white border border-grey-100 shadow-2xl rounded-[3rem] text-center transform rotate-2">
                   <Building2 size={24} className="mx-auto text-brand mb-4 opacity-30" />
                   <h4 className="font-serif text-2xl mb-1 text-grey-900 tracking-tight">Area 51</h4>
-                  <p className="text-[0.6rem] uppercase tracking-widest text-grey-400 font-sans font-bold leading-none">Bela Vista</p>
+                  <p className="text-[0.6rem] uppercase tracking-widest text-grey-400 font-sans font-normal leading-none">Bela Vista</p>
                 </div>
                 <div className="aspect-[4/5] rounded-[3.5rem] overflow-hidden shadow-2xl group border-[12px] border-grey-50">
                   <img src="http://coletivo.cc/wp-content/uploads/2025/06/1.jpg" className="w-full h-full object-cover transition-all duration-[2s] ease-out group-hover:scale-105" alt="Unidade Area 51" />
@@ -169,7 +169,7 @@ export default function EnderecoComercial() {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(74,107,63,0.05)_0%,transparent_70%)] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-6 md:px-16 relative z-10 text-left">
           <div className="text-left mb-32 reveal">
-            <p className="text-brand text-[0.7rem] uppercase tracking-[0.5em] mb-8 font-bold font-sans italic">Credibilidade para o Negócio</p>
+            <p className="text-brand text-[0.7rem] uppercase tracking-[0.5em] mb-8 font-sans italic">Credibilidade para o Negócio</p>
             <h2 className="display-1 leading-[0.8] mb-8 tracking-tighter text-white">Um endereço que <br /><span className="italic text-brand font-light">valoriza seu negócio.</span></h2>
           </div>
 
@@ -199,7 +199,7 @@ export default function EnderecoComercial() {
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-24 xl:gap-32 items-center">
             <div className="reveal space-y-16">
               <div className="space-y-10 text-left">
-                <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-bold">Confiança e Seriedade</div>
+                <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-normal">Confiança e Seriedade</div>
                 <h2 className="font-serif text-4xl md:text-7xl text-grey-900 leading-[0.9] tracking-tighter">Onde o sucesso <br /><span className="italic text-brand font-light uppercase text-3xl md:text-5xl tracking-[0.2em] block mt-4">começa.</span></h2>
                 <p className="font-serif font-light text-grey-500 text-xl md:text-2xl leading-relaxed">
                   Sem papelada difícil e sem fiadores. Tudo o que você precisa para começar a trabalhar com um endereço de confiança.
@@ -228,7 +228,7 @@ export default function EnderecoComercial() {
                 
                 <div className="space-y-16 relative z-10 text-left">
                   <div className="space-y-6">
-                    <p className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-bold italic">Apenas</p>
+                    <p className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-normal italic">Apenas</p>
                     <div className="flex items-baseline gap-4">
                       <span className="text-7xl md:text-9xl font-serif tracking-tighter leading-none">R$ 250</span>
                       <span className="text-white/20 font-serif italic text-3xl pb-2">/mês</span>
@@ -259,12 +259,12 @@ export default function EnderecoComercial() {
                   </ul>
 
                   <button 
-                    className="btn btn-brand w-full h-20 text-xl font-bold tracking-widest shadow-2xl shadow-brand/40"
+                    className="btn btn-brand w-full py-5 text-base font-normal tracking-widest shadow-2xl shadow-brand/40"
                     onClick={() => (window as any).openModal?.('Endereço Comercial - Plano Base')}
                   >
                     ATIVAR AGORA
                   </button>
-                  <p className="text-center text-white/30 text-[0.6rem] uppercase tracking-[0.2em] font-sans font-bold">Sem tempo mínimo • Ativação em 24h</p>
+                  <p className="text-center text-white/30 text-[0.6rem] uppercase tracking-[0.2em] font-sans font-normal">Sem tempo mínimo • Ativação em 24h</p>
                 </div>
               </div>
             </div>
@@ -281,12 +281,12 @@ export default function EnderecoComercial() {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-8 pt-12">
             <button 
-              className="btn btn-brand h-16 px-12 text-lg"
+              className="btn btn-brand"
               onClick={() => (window as any).openModal?.('Visita Endereço Comercial')}
             >
               Começar Hoje
             </button>
-            <Link to="/unidades" className="btn btn-outline-brand h-16 px-12 text-lg">
+            <Link to="/unidades" className="btn btn-outline-brand">
               Ver Nossos Espaços
             </Link>
           </div>

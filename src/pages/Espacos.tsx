@@ -55,7 +55,7 @@ export default function Espacos() {
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
             className="space-y-12"
           >
-            <p className="text-brand text-[0.7rem] uppercase tracking-[0.6em] font-sans font-bold">Tipos de Espaços</p>
+            <p className="text-brand text-[0.7rem] uppercase tracking-[0.6em] font-sans font-normal">Tipos de Espaços</p>
             <h1 className="display-1 text-white leading-[0.8] mb-8 tracking-tighter">
               Trabalhe melhor <br /><span className="italic text-brand font-light">com mais</span> <br />conforto.
             </h1>
@@ -64,7 +64,7 @@ export default function Espacos() {
             </p>
             <div className="flex items-center gap-4 pt-4">
               <div className="w-12 h-px bg-brand/30" />
-              <p className="text-[0.6rem] uppercase tracking-[0.3em] font-sans font-bold text-white/40">Explore nossas soluções</p>
+              <p className="text-[0.6rem] uppercase tracking-[0.3em] font-sans font-normal text-white/40">Explore nossas soluções</p>
             </div>
           </motion.div>
         </div>
@@ -75,7 +75,7 @@ export default function Espacos() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 xl:gap-32 items-center">
             <div className="reveal space-y-12">
-              <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-bold italic">Privacidade: Salas para Empresas</div>
+              <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-normal italic">Privacidade: Salas para Empresas</div>
               <h2 className="font-serif text-4xl md:text-7xl text-grey-900 leading-[0.9] tracking-tighter">
                 Exclusividade & <br />
                 <span className="italic text-brand font-light font-serif">Sua Identidade.</span>
@@ -90,26 +90,7 @@ export default function Espacos() {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-10 pt-6">
-                <div className="flex items-start gap-5">
-                  <div className="w-14 h-14 rounded-[1.2rem] bg-grey-50 flex items-center justify-center text-brand shadow-sm flex-shrink-0 group hover:bg-brand hover:text-white transition-all duration-500">
-                    <Shield size={24} />
-                  </div>
-                  <div>
-                    <h4 className="font-serif text-xl text-grey-900 mb-1 tracking-tight">Segurança & Privacidade</h4>
-                    <p className="text-sm text-grey-400 font-serif font-light leading-relaxed">Acesso controlado e ambientes isolados para total confidencialidade.</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-5">
-                  <div className="w-14 h-14 rounded-[1.2rem] bg-grey-50 flex items-center justify-center text-brand shadow-sm flex-shrink-0 group hover:bg-brand hover:text-white transition-all duration-500">
-                    <Zap size={24} />
-                  </div>
-                  <div>
-                    <h4 className="font-serif text-xl text-grey-900 mb-1 tracking-tight">Escalabilidade</h4>
-                    <p className="text-sm text-grey-400 font-serif font-light leading-relaxed">Sua empresa cresce, nós crescemos com você. Layouts flexíveis.</p>
-                  </div>
-                </div>
-              </div>
+
 
               <div className="pt-10 flex flex-wrap gap-6">
                 <button 
@@ -155,7 +136,7 @@ export default function Espacos() {
                 />
             </div>
             <div className="reveal order-1 lg:order-2 space-y-10">
-              <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-bold">Crescimento: Salas de Time</div>
+              <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-normal">Crescimento: Salas de Time</div>
               <h2 className="font-serif text-4xl md:text-6xl text-grey-900 leading-tight tracking-tighter">Agilidade para <br /><span className="italic text-brand font-light">Seu Time Crescer.</span></h2>
               <p className="font-serif font-light text-grey-500 text-lg md:text-xl leading-relaxed">
                 Ideal para squads e startups que precisam de um ambiente focado e integrado ao ecossistema. Espaços dinâmicos que incentivam a colaboração.
@@ -163,7 +144,7 @@ export default function Espacos() {
               <div className="space-y-4">
                 {[
                   "Infraestrutura de tecnologia redundante",
-                  "Mobiliário ergonômico premium",
+                  "Mobiliário ergonômico de alto padrão",
                   "Acesso 24/7 incluso",
                   "Internet de ultra velocidade"
                 ].map((item, i) => (
@@ -190,15 +171,15 @@ export default function Espacos() {
       <section className="py-32 md:py-56 px-6 md:px-16 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-24 reveal">
-            <p className="text-brand text-[0.7rem] uppercase tracking-[0.5em] mb-8 font-sans font-bold">Padrão Coletivo</p>
+            <p className="text-brand text-[0.7rem] uppercase tracking-[0.5em] mb-8 font-sans font-normal">Padrão Coletivo</p>
             <h2 className="font-serif text-5xl md:text-7xl text-grey-900 leading-[0.9] tracking-tighter">Onde o trabalho <br /><span className="italic text-brand font-light">encontra a vida.</span></h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
             {[
-              { icon: <Zap size={32} />, title: 'Infraestrutura', desc: 'Mobiliário ergonômico, internet redundante e tecnologia de ponta para sua jornada não parar.' },
-              { icon: <Users size={32} />, title: 'Conexão Real', desc: 'Muito além do networking: uma comunidade de parceiros e amigos focados em crescer juntos.' },
-              { icon: <Leaf size={32} />, title: 'Ambiente Vivo', desc: 'Espaços com luz natural e vegetação, respeitando a arquitetura histórica e seu conforto.' }
+              { icon: <Zap size={32} />, title: 'Infra', desc: 'Mesas confortáveis, internet muito rápida e toda a estrutura para o seu trabalho não parar.' },
+              { icon: <Users size={32} />, title: 'Conexão', desc: 'Uma comunidade de verdade para conversar, trocar ideias e crescer junto com outras pessoas.' },
+              { icon: <Leaf size={32} />, title: 'Ambiente Vivo', desc: 'Espaço com bastante luz natural, plantas e muito conforto para você se sentir bem todos os dias.' }
             ].map((item, i) => (
               <div key={item.title} className="reveal p-16 bg-[#F9F8F6] rounded-[3rem] space-y-8 text-center shadow-sm hover:shadow-2xl transition-all duration-500 border border-grey-100/50 group" style={{ transitionDelay: `${i * 0.1}s` }}>
                 <div className="w-20 h-20 bg-white rounded-[1.5rem] flex items-center justify-center text-brand mx-auto shadow-inner group-hover:bg-brand group-hover:text-white transition-all duration-500 transform group-hover:rotate-6">
@@ -222,7 +203,7 @@ export default function Espacos() {
           {/* ESTAÇÃO ROTATIVA */}
           <div id="estacao-rotativa" className="grid grid-cols-1 lg:grid-cols-2 gap-24 xl:gap-32 items-center scroll-mt-32">
             <div className="reveal space-y-12">
-              <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-bold italic">Individuais: Mesa Rotativa</div>
+              <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-normal italic">Individuais: Mesa Rotativa</div>
               <h2 className="font-serif text-4xl md:text-7xl leading-[0.9] tracking-tighter">Liberdade &<br /><span className="italic text-brand font-light">Praticidade.</span></h2>
               <p className="font-serif font-light text-white/30 text-lg md:text-xl leading-relaxed">
                 Para quem está sempre em movimento e quer um lugar de qualidade. Tenha a liberdade de escolher seu lugar a cada dia em ambientes amplos e inspiradores.
@@ -250,7 +231,7 @@ export default function Espacos() {
               <img src="http://coletivo.cc/wp-content/uploads/2025/06/6.jpg" alt="Espaço Resident" className="w-full h-full object-cover opacity-60 hover:opacity-100 transition-opacity duration-1000" />
             </div>
             <div className="reveal order-1 lg:order-2 space-y-12">
-              <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-bold italic">Dedicados: Mesa Fixa</div>
+              <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-normal italic">Dedicados: Mesa Fixa</div>
               <h2 className="font-serif text-4xl md:text-7xl leading-[0.9] tracking-tighter">Sua base de<br /><span className="italic text-brand font-light">foco total.</span></h2>
               <p className="font-serif font-light text-white/30 text-lg md:text-xl leading-relaxed">
                 Para quem gosta de rotina. O plano Resident oferece uma mesa só sua em um ambiente compartilhado, unindo privacidade e comunidade.
@@ -275,7 +256,7 @@ export default function Espacos() {
               <img src="http://coletivo.cc/wp-content/uploads/2025/06/2.jpg" alt="Salas de Reunião" className="w-full h-full object-cover opacity-60 hover:opacity-100 transition-opacity duration-1000" />
             </div>
             <div className="reveal order-1 lg:order-2 space-y-12">
-              <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-bold italic">Reuniões: Salas Profissionais</div>
+              <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-normal italic">Reuniões: Salas Profissionais</div>
               <h2 className="font-serif text-4xl md:text-7xl leading-[0.9] tracking-tighter text-white">Momentos de <br /><span className="italic text-brand font-light">Grandes Reuniões.</span></h2>
               <p className="font-serif font-light text-white/30 text-lg md:text-xl leading-relaxed">
                 Ambientes com telas de alta qualidade, bom isolamento de barulho e atendimento completo para você e seus clientes.

@@ -91,7 +91,7 @@ export default function PrivativoStartup() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 xl:gap-32 items-center">
           <div className="reveal space-y-16">
             <div className="space-y-10">
-              <p className="text-brand text-[0.7rem] uppercase tracking-[0.4em] font-sans font-bold">Lugar de Inovação</p>
+              <p className="text-brand text-[0.7rem] uppercase tracking-[0.4em] font-sans font-normal">Lugar de Inovação</p>
               <h2 className="font-serif text-4xl md:text-7xl text-grey-900 leading-[0.9] tracking-tighter">
                 Onde as ideias <br />
                 <span className="italic text-brand font-light uppercase text-3xl md:text-5xl tracking-[0.2em] block mt-4">saem do papel.</span>
@@ -134,7 +134,7 @@ export default function PrivativoStartup() {
               </p>
               <div className="mt-8 flex items-center gap-4">
                 <div className="w-8 h-px bg-grey-100" />
-                <span className="text-[0.6rem] uppercase tracking-[0.2em] font-sans font-bold text-grey-400">Fundador da TechSuite</span>
+                <span className="text-[0.6rem] uppercase tracking-[0.2em] font-sans font-normal text-grey-400">Fundador da TechSuite</span>
               </div>
             </div>
           </div>
@@ -151,12 +151,12 @@ export default function PrivativoStartup() {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-8 pt-12">
             <button 
-              className="btn btn-brand h-16 px-12 text-lg"
+              className="btn btn-brand"
               onClick={() => (window as any).openModal?.('Visita Privativo Startup')}
             >
               Falar com a Equipe
             </button>
-            <button className="btn btn-outline-white h-16 px-12 text-lg">
+            <button className="btn btn-outline-white">
               Ver Fotos das Salas
             </button>
           </div>

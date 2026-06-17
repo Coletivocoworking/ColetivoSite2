@@ -92,9 +92,6 @@ export default function Eventos() {
               >
                 Pedir Orçamento
               </button>
-              <button className="btn btn-outline-white">
-                Eventos que já realizamos
-              </button>
             </div>
           </motion.div>
         </div>
@@ -105,7 +102,7 @@ export default function Eventos() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 xl:gap-32 items-center text-left">
             <div className="reveal space-y-12">
-              <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-bold italic">Ambiente Especial</div>
+              <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-normal italic">Ambiente Especial</div>
               <h2 className="font-serif text-4xl md:text-7xl text-grey-900 leading-[0.9] tracking-tighter">
                 O lugar que <br />
                 <span className="italic text-brand font-light uppercase text-3xl md:text-5xl tracking-[0.2em] block mt-4">ajuda na sua marca.</span>
@@ -121,11 +118,11 @@ export default function Eventos() {
               <div className="grid grid-cols-2 gap-12 pt-10 border-t border-grey-50">
                 <div className="space-y-4">
                   <span className="text-5xl md:text-6xl font-serif text-brand italic tracking-tighter leading-none">100%</span>
-                  <p className="text-[0.65rem] uppercase tracking-[0.2em] text-grey-400 font-sans font-bold italic">Privacidade & Conforto</p>
+                  <p className="text-[0.65rem] uppercase tracking-[0.2em] text-grey-400 font-sans font-normal italic">Privacidade & Conforto</p>
                 </div>
                 <div className="space-y-4">
                   <span className="text-5xl md:text-6xl font-serif text-brand italic tracking-tighter leading-none">4K</span>
-                  <p className="text-[0.65rem] uppercase tracking-[0.2em] text-grey-400 font-sans font-bold italic">Tecnologia de som e imagem</p>
+                  <p className="text-[0.65rem] uppercase tracking-[0.2em] text-grey-400 font-sans font-normal italic">Tecnologia de som e imagem</p>
                 </div>
               </div>
             </div>
@@ -151,7 +148,7 @@ export default function Eventos() {
       <section className="py-32 md:py-64 bg-grey-50 border-y border-grey-100">
         <div className="max-w-7xl mx-auto px-6 md:px-16 text-left">
           <div className="text-left mb-32 reveal">
-            <p className="text-brand text-[0.7rem] uppercase tracking-[0.5em] mb-8 font-bold font-sans italic">Formatos Especiais</p>
+            <p className="text-brand text-[0.7rem] uppercase tracking-[0.5em] mb-8 font-normal font-sans italic">Formatos Especiais</p>
             <h2 className="font-serif text-4xl md:text-7xl lg:text-8xl text-grey-900 tracking-tighter leading-[0.8]">Sua ideia, <br /><span className="italic text-brand font-light uppercase text-3xl md:text-5xl tracking-[0.22em] block mt-8">nosso palco.</span></h2>
           </div>
 
@@ -164,7 +161,7 @@ export default function Eventos() {
               >
                 <div className="aspect-[4/3] overflow-hidden relative">
                   <img src={event.img} alt={event.title} className="w-full h-full object-cover group-hover:scale-110 transition-all duration-[2s] ease-out" />
-                  <div className="absolute top-10 right-10 bg-white/90 backdrop-blur-md text-brand px-6 py-2 rounded-full text-[0.6rem] uppercase tracking-[0.2em] font-sans font-bold shadow-xl border border-grey-100/50">
+                  <div className="absolute top-10 right-10 bg-white/90 backdrop-blur-md text-brand px-6 py-2 rounded-full text-[0.6rem] uppercase tracking-[0.2em] font-sans font-normal shadow-xl border border-grey-100/50">
                     {event.capacity}
                   </div>
                 </div>
@@ -185,7 +182,7 @@ export default function Eventos() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 xl:gap-32 items-center">
             <div className="reveal space-y-16">
               <div className="space-y-8">
-                <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-bold italic">Serviços Completos</div>
+                <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-normal italic">Serviços Completos</div>
                 <h2 className="font-serif text-4xl md:text-7xl leading-[0.9] tracking-tighter text-white">Trabalho <br /><span className="italic text-brand font-light">sem preocupações.</span></h2>
                 <p className="font-serif font-light text-white/40 text-lg md:text-2xl leading-relaxed">
                   Tecnologia de alto nível para que você possa focar em seus convidados, enquanto nossa equipe cuida de todos os detalhes técnicos.
@@ -214,7 +211,7 @@ export default function Eventos() {
                   <Gem size={200} strokeWidth={0.5} />
                 </div>
                 <div className="space-y-8 relative z-10">
-                  <p className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-bold italic">Qualidade Máxima</p>
+                  <p className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-normal italic">Qualidade Máxima</p>
                   <h3 className="font-serif text-5xl md:text-7xl leading-[0.9] tracking-tighter">Cuidado com os <br /><span className="italic text-brand font-light uppercase text-3xl tracking-[0.2em] block mt-4">Convidados.</span></h3>
                   <p className="text-white/40 font-serif font-light text-xl leading-relaxed">Nossa equipe especial, que atende grandes empresas, cuidará do conforto dos seus convidados, do início ao fim.</p>
                 </div>
@@ -241,12 +238,12 @@ export default function Eventos() {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-10 pt-10">
             <button 
-              className="btn btn-brand h-16 px-12 text-lg shadow-xl shadow-brand/20 transition-all duration-500"
+              className="btn btn-brand shadow-xl shadow-brand/20 transition-all duration-500"
               onClick={() => (window as any).openModal?.('Visita Técnica Eventos')}
             >
               Agendar Visita
             </button>
-            <button className="btn btn-outline-brand h-16 px-12 text-lg">
+            <button className="btn btn-outline-brand">
               Ver Informações
             </button>
           </div>

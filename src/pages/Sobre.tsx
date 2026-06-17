@@ -1,7 +1,138 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { FAQ } from '../components/FAQ';
-import { Quote, Building2, Users2, Zap, X } from 'lucide-react';
+import { Quote, Building2, Users2, Zap, X, ChevronLeft, ChevronRight } from 'lucide-react';
+
+interface ImageSliderProps {
+  images: string[];
+  onImageClick: (img: string) => void;
+}
+
+function ImageSlider({ images, onImageClick }: ImageSliderProps) {
+  const scrollRef = React.useRef<HTMLDivElement>(null);
+  const [showLeft, setShowLeft] = useState(false);
+  const [showRight, setShowRight] = useState(true);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const checkScroll = () => {
+    if (scrollRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+      setShowLeft(scrollLeft > 15);
+      setShowRight(scrollLeft + clientWidth < scrollWidth - 15);
+
+      // Estimate active index based on scroll position
+      const itemWidth = scrollWidth / images.length;
+      const index = Math.round(scrollLeft / itemWidth);
+      if (index >= 0 && index < images.length) {
+        setActiveIndex(index);
+      }
+    }
+  };
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (el) {
+      el.addEventListener('scroll', checkScroll);
+      setTimeout(checkScroll, 100);
+      window.addEventListener('resize', checkScroll);
+    }
+    return () => {
+      if (el) el.removeEventListener('scroll', checkScroll);
+      window.removeEventListener('resize', checkScroll);
+    };
+  }, [images]);
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      const { clientWidth } = scrollRef.current;
+      const scrollAmount = direction === 'left' ? -clientWidth * 0.8 : clientWidth * 0.8;
+      scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <div className="relative group/slider w-full select-none">
+      {/* Navigation Buttons */}
+      <AnimatePresence>
+        {showLeft && (
+          <motion.button
+            initial={{ opacity: 0, x: -10 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -10 }}
+            onClick={() => scroll('left')}
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/95 hover:bg-white text-grey-900 border border-grey-100 p-3 rounded-full shadow-lg transition-transform hover:scale-105 active:scale-95 duration-200 cursor-pointer hidden md:flex items-center justify-center backdrop-blur-sm"
+            aria-label="Anterior"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </motion.button>
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {showRight && (
+          <motion.button
+            initial={{ opacity: 0, x: 10 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: 10 }}
+            onClick={() => scroll('right')}
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/95 hover:bg-white text-grey-900 border border-grey-100 p-3 rounded-full shadow-lg transition-transform hover:scale-105 active:scale-95 duration-200 cursor-pointer hidden md:flex items-center justify-center backdrop-blur-sm"
+            aria-label="Próximo"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </motion.button>
+        )}
+      </AnimatePresence>
+
+      {/* Sliding Strip */}
+      <div 
+        ref={scrollRef}
+        onScroll={checkScroll}
+        className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-8 px-4 -mx-4 md:px-0 md:mx-0 scrollbar-none"
+        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+      >
+        {images.map((img, i) => (
+          <motion.div 
+            key={i}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: Math.min(i * 0.05, 0.4) }}
+            className="snap-start shrink-0 w-[85%] sm:w-[45%] md:w-[31.5%] aspect-[16/10] overflow-hidden rounded-2xl md:rounded-[2rem] relative group cursor-zoom-in border border-grey-100 shadow-md shadow-brand/2"
+            onClick={() => onImageClick(img)}
+          >
+            <img 
+              src={img} 
+              alt={`Gallery Image ${i + 1}`} 
+              className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 ease-out"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-500" />
+          </motion.div>
+        ))}
+      </div>
+
+      {/* Slide Indicators / Dots */}
+      <div className="flex justify-center gap-1.5 mt-2">
+        {images.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => {
+              if (scrollRef.current) {
+                const { scrollWidth } = scrollRef.current;
+                const itemWidth = scrollWidth / images.length;
+                scrollRef.current.scrollTo({ left: i * itemWidth, behavior: 'smooth' });
+              }
+            }}
+            className={`h-1.5 rounded-full transition-all duration-300 ${
+              activeIndex === i ? 'w-6 bg-brand' : 'w-1.5 bg-grey-300 hover:bg-grey-450'
+            }`}
+            aria-label={`Slide ${i + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export default function Sobre() {
   const [selectedImg, setSelectedImg] = useState<string | null>(null);
@@ -38,7 +169,7 @@ export default function Sobre() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="text-white text-[0.7rem] uppercase font-bold font-sans tracking-[0.4em] italic"
+            className="tag-label text-white/80 font-normal no-italic"
           >
             A Alma do Nosso Espaço
           </motion.p>
@@ -46,7 +177,7 @@ export default function Sobre() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="display-1 text-white tracking-tighter leading-[0.9]"
+            className="display-hero text-white tracking-tighter leading-[0.9]"
           >
             Somos <br /><span className="italic text-brand font-light font-serif">Coletivo.</span>
           </motion.h1>
@@ -61,7 +192,7 @@ export default function Sobre() {
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-24 reveal">
             <Quote className="text-brand/20 mx-auto mb-10" size={64} strokeWidth={1} />
-            <h2 className="font-serif text-3xl md:text-6xl text-grey-900 mb-12 italic leading-[1.1] tracking-tight max-w-4xl mx-auto">
+            <h2 className="display-section text-grey-900 mb-12 italic leading-[1.1] tracking-tight max-w-4xl mx-auto">
               Um lugar onde você <span className="text-brand">produz mais</span> e se sente parte de <span className="text-brand">algo maior.</span>
             </h2>
           </div>
@@ -88,8 +219,8 @@ export default function Sobre() {
                 <div className="w-16 h-16 bg-white rounded-2xl shadow-xl shadow-brand/5 flex items-center justify-center mb-10 group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500">
                   {item.icon}
                 </div>
-                <h3 className="font-serif text-3xl italic text-grey-900 mb-6">{item.title}</h3>
-                <p className="font-sans font-light text-grey-500 text-xl leading-relaxed italic">
+                <h3 className="display-subsection text-grey-900 mb-6">{item.title}</h3>
+                <p className="body-lead text-grey-500 italic">
                   {item.desc}
                 </p>
               </div>
@@ -98,7 +229,7 @@ export default function Sobre() {
 
           <div className="reveal border-t border-brand/10 pt-20">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <div className="space-y-8 font-sans font-light text-grey-600 text-lg md:text-xl leading-relaxed italic">
+              <div className="body-lead text-grey-600 italic space-y-8">
                 <p>
                   Acreditamos que o sucesso não precisa vir com cansaço excessivo. No Coletivo, cada detalhe é pensado para respeitar o seu tempo e ajudar você a pensar melhor.
                 </p>
@@ -126,10 +257,10 @@ export default function Sobre() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 xl:gap-32 items-center text-left">
           <div className="reveal space-y-12">
 
-            <h2 className="font-serif text-4xl md:text-8xl text-grey-900 leading-[0.8] tracking-tighter">
+            <h2 className="display-section text-grey-900 leading-[0.9] tracking-tighter">
               Nossa história ajuda a <span className="text-brand italic font-light">impulsionar</span> o seu futuro.
             </h2>
-            <div className="space-y-8 font-serif font-light text-grey-500 text-lg md:text-2xl italic leading-relaxed">
+            <div className="body-lead text-grey-500 space-y-8">
               <p>
                 Nossa história faz parte de Porto Alegre. Começamos na Casa 62, uma casa histórica de 1965 que cuidamos com muito carinho até hoje.
               </p>
@@ -156,28 +287,23 @@ export default function Sobre() {
       <section className="py-32 md:py-64 px-6 md:px-16 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-3xl mb-24 reveal text-left">
-            <p className="text-brand text-[0.65rem] uppercase tracking-[0.5em] mb-8 font-bold font-sans italic">Nosso Time</p>
-            <h2 className="font-serif text-5xl md:text-8xl text-grey-900 mb-12 leading-[0.8] tracking-tighter">As pessoas por trás<br />da <span className="italic text-brand font-light">experiência.</span></h2>
+            <p className="tag-label">Nosso Time</p>
+            <h2 className="display-section text-grey-900 mb-12">As pessoas por trás<br />da <span className="italic text-brand font-light">experiência.</span></h2>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-5 gap-x-6 gap-y-12 md:gap-x-8 md:gap-y-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-12 md:gap-x-8 md:gap-y-16 max-w-5xl mx-auto justify-center">
             {[
               { name: 'Jade', role: 'Recepção Casa 62', img: 'http://coletivo.cc/wp-content/uploads/2026/04/13.png' },
               { name: 'Thaty', role: 'Recepção Area 51', img: 'http://coletivo.cc/wp-content/uploads/2026/04/15.png' },
               { name: 'Brenda', role: 'Gerente de Comunidade', img: 'http://coletivo.cc/wp-content/uploads/2026/04/14.png' },
-              { name: 'Luana', role: 'Gerente Operacional', img: 'http://coletivo.cc/wp-content/uploads/2026/04/12.png' },
-              { name: 'Diogo', role: 'Diretor', img: 'http://coletivo.cc/wp-content/uploads/2026/04/13.png' },
-              { name: 'Esdras', role: 'Sucesso do Cliente', img: 'http://coletivo.cc/wp-content/uploads/2026/04/15.png' },
-              { name: 'Isadora', role: 'Comercial', img: 'http://coletivo.cc/wp-content/uploads/2026/04/14.png' },
-              { name: 'Eduarda', role: 'Social Media', img: 'http://coletivo.cc/wp-content/uploads/2026/04/13.png' },
-              { name: 'Nicolas', role: 'Marketing', img: 'http://coletivo.cc/wp-content/uploads/2026/04/15.png' }
+              { name: 'Luana', role: 'Gerente Operacional', img: 'http://coletivo.cc/wp-content/uploads/2026/04/12.png' }
             ].map((member, i) => (
               <div key={i} className="reveal group" style={{ transitionDelay: `${i * 0.05}s` }}>
                 <div className="aspect-[3/4] overflow-hidden rounded-[1.5rem] mb-6 transition-all duration-700 shadow-xl shadow-black/5">
                   <img src={member.img} alt={member.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[2s]" />
                 </div>
-                <h3 className="font-serif text-xl md:text-2xl italic text-grey-900 leading-tight">{member.name}</h3>
-                <p className="text-[0.6rem] md:text-[0.65rem] uppercase tracking-widest text-brand font-sans font-bold mt-2">{member.role}</p>
+                <h3 className="display-subsection text-grey-900 leading-tight">{member.name}</h3>
+                <p className="text-[0.6rem] md:text-[0.65rem] uppercase tracking-widest text-brand font-sans font-normal mt-2">{member.role}</p>
               </div>
             ))}
           </div>
@@ -189,54 +315,34 @@ export default function Sobre() {
         <div className="px-6 md:px-16 max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-12 mb-16 md:mb-24">
             <div className="max-w-xl reveal text-left">
-              <p className="text-brand text-[0.6rem] md:text-[0.65rem] uppercase tracking-[0.5em] mb-6 font-bold font-sans">Patrimônio & Design</p>
-              <h2 className="font-serif text-4xl md:text-7xl text-grey-900 leading-[0.85] tracking-tighter">
+              <p className="tag-label">Patrimônio & Design</p>
+              <h2 className="display-section text-grey-900 leading-[0.85] tracking-tighter">
                 Casa 62 <br />
                 <span className="italic text-brand font-light">Nossa Origem.</span>
               </h2>
             </div>
             <div className="max-w-xs reveal">
-              <p className="font-serif font-light text-grey-400 text-base leading-relaxed">
+              <p className="body-lead text-grey-500">
                 Cada detalhe da nossa primeira unidade foi pensado para preservar a história enquanto abraça o futuro do trabalho.
               </p>
             </div>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-12 gap-4 md:gap-6">
-            {[
-              { img: "http://coletivo.cc/wp-content/uploads/2023/04/IMG_0879_edit-scaled.jpg", col: "col-span-2 md:col-span-8", aspect: "aspect-[16/10]" },
-              { img: "http://coletivo.cc/wp-content/uploads/2023/04/IMG_0980_edit-v02.jpg", col: "col-span-1 md:col-span-4", aspect: "aspect-[4/5]" },
-              { img: "http://coletivo.cc/wp-content/uploads/2023/03/IMG_0691_edit-scaled.jpg", col: "col-span-1 md:col-span-4", aspect: "aspect-square" },
-              { img: "http://coletivo.cc/wp-content/uploads/2023/03/IMG_0571_edit-scaled.jpg", col: "col-span-1 md:col-span-4", aspect: "aspect-square" },
-              { img: "http://coletivo.cc/wp-content/uploads/2023/03/IMG_0610_edit-scaled.jpg", col: "col-span-1 md:col-span-4", aspect: "aspect-square" },
-              { img: "http://coletivo.cc/wp-content/uploads/2023/04/IMG_0909_edit.jpg", col: "col-span-2 md:col-span-12", aspect: "aspect-[3/1] md:aspect-[21/7]" },
-              { img: "http://coletivo.cc/wp-content/uploads/2023/03/IMG_0630_edit-1-scaled.jpg", col: "col-span-1 md:col-span-6", aspect: "aspect-[16/10]" },
-              { img: "http://coletivo.cc/wp-content/uploads/2025/06/4.jpg", col: "col-span-1 md:col-span-6", aspect: "aspect-[16/10]" },
-              { img: "http://coletivo.cc/wp-content/uploads/2023/04/IMG_0732_edit.jpg", col: "col-span-1 md:col-span-5", aspect: "aspect-[4/5]" },
-              { img: "http://coletivo.cc/wp-content/uploads/2022/12/coletivo62-petropolis-corredor.jpg", col: "col-span-2 md:col-span-7", aspect: "aspect-[16/10] md:aspect-[4/5] lg:aspect-[16/10]" },
-            ].map((item, i) => (
-              <motion.div 
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ 
-                  duration: 0.8, 
-                  delay: i * 0.1,
-                  ease: [0.16, 1, 0.3, 1] 
-                }}
-                className={`${item.col} ${item.aspect} overflow-hidden rounded-2xl md:rounded-[2.5rem] reveal relative group cursor-zoom-in`}
-                onClick={() => setSelectedImg(item.img)}
-              >
-                <img 
-                  src={item.img} 
-                  alt={`Casa 62 Detail ${i + 1}`} 
-                  className="w-full h-full object-cover transition-all duration-[2s] group-hover:scale-105 ease-out"
-                />
-                <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-700" />
-              </motion.div>
-            ))}
-          </div>
+          <ImageSlider 
+            images={[
+              "http://coletivo.cc/wp-content/uploads/2023/04/IMG_0879_edit-scaled.jpg",
+              "http://coletivo.cc/wp-content/uploads/2023/04/IMG_0980_edit-v02.jpg",
+              "http://coletivo.cc/wp-content/uploads/2023/03/IMG_0691_edit-scaled.jpg",
+              "http://coletivo.cc/wp-content/uploads/2023/03/IMG_0571_edit-scaled.jpg",
+              "http://coletivo.cc/wp-content/uploads/2023/03/IMG_0610_edit-scaled.jpg",
+              "http://coletivo.cc/wp-content/uploads/2023/04/IMG_0909_edit.jpg",
+              "http://coletivo.cc/wp-content/uploads/2023/03/IMG_0630_edit-1-scaled.jpg",
+              "http://coletivo.cc/wp-content/uploads/2025/06/4.jpg",
+              "http://coletivo.cc/wp-content/uploads/2023/04/IMG_0732_edit.jpg",
+              "http://coletivo.cc/wp-content/uploads/2022/12/coletivo62-petropolis-corredor.jpg"
+            ]} 
+            onImageClick={setSelectedImg} 
+          />
         </div>
       </section>
 
@@ -278,52 +384,32 @@ export default function Sobre() {
         <div className="px-6 md:px-16 max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-12 mb-16 md:mb-24">
             <div className="max-w-xl reveal text-left">
-              <p className="text-brand text-[0.6rem] md:text-[0.65rem] uppercase tracking-[0.5em] mb-6 font-bold font-sans">Inovação & Expansão</p>
-              <h2 className="font-serif text-4xl md:text-7xl text-grey-900 leading-[0.85] tracking-tighter">
+              <p className="tag-label">Inovação & Expansão</p>
+              <h2 className="display-section text-grey-900 leading-[0.85] tracking-tighter">
                 Area 51 <br />
                 <span className="italic text-brand font-light">Novo Horizonte.</span>
               </h2>
             </div>
             <div className="max-w-xs reveal">
-              <p className="font-serif font-light text-grey-400 text-base leading-relaxed">
+              <p className="body-lead text-grey-500">
                 Nossa segunda unidade traz uma estética contemporânea e industrial, focada na inovação e conexões globais.
               </p>
             </div>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-12 gap-4 md:gap-6">
-            {[
-              { img: "http://coletivo.cc/wp-content/uploads/2022/12/Coletivo-area-51-frente.jpg", col: "col-span-2 md:col-span-12", aspect: "aspect-[21/9]" },
-              { img: "http://coletivo.cc/wp-content/uploads/2025/06/1.jpg", col: "col-span-1 md:col-span-4", aspect: "aspect-square" },
-              { img: "http://coletivo.cc/wp-content/uploads/2025/06/3.jpg", col: "col-span-1 md:col-span-4", aspect: "aspect-square" },
-              { img: "http://coletivo.cc/wp-content/uploads/2023/04/IMG_0873-1.jpeg", col: "col-span-1 md:col-span-4", aspect: "aspect-square" },
-              { img: "http://coletivo.cc/wp-content/uploads/2025/03/Design-sem-nome-5.jpg", col: "col-span-2 md:col-span-8", aspect: "aspect-[16/10] md:aspect-[21/9]" },
-              { img: "http://coletivo.cc/wp-content/uploads/2025/03/Design-sem-nome-4.jpg", col: "col-span-1 md:col-span-4", aspect: "aspect-[4/5]" },
-              { img: "http://coletivo.cc/wp-content/uploads/2023/04/IMG_0879.jpeg", col: "col-span-1 md:col-span-6", aspect: "aspect-[16/10]" },
-              { img: "http://coletivo.cc/wp-content/uploads/2023/04/IMG_6134-1.jpeg", col: "col-span-1 md:col-span-6", aspect: "aspect-[16/10]" },
-            ].map((item, i) => (
-              <motion.div 
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ 
-                  duration: 0.8, 
-                  delay: i * 0.1,
-                  ease: [0.16, 1, 0.3, 1] 
-                }}
-                className={`${item.col} ${item.aspect} overflow-hidden rounded-2xl md:rounded-[2.5rem] reveal relative group cursor-zoom-in shadow-xl shadow-black/5`}
-                onClick={() => setSelectedImg(item.img)}
-              >
-                <img 
-                  src={item.img} 
-                  alt={`Area 51 Detail ${i + 1}`} 
-                  className="w-full h-full object-cover transition-all duration-[2s] group-hover:scale-105 ease-out"
-                />
-                <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-700" />
-              </motion.div>
-            ))}
-          </div>
+          <ImageSlider 
+            images={[
+              "http://coletivo.cc/wp-content/uploads/2022/12/Coletivo-area-51-frente.jpg",
+              "http://coletivo.cc/wp-content/uploads/2025/06/1.jpg",
+              "http://coletivo.cc/wp-content/uploads/2025/06/3.jpg",
+              "http://coletivo.cc/wp-content/uploads/2023/04/IMG_0873-1.jpeg",
+              "http://coletivo.cc/wp-content/uploads/2025/03/Design-sem-nome-5.jpg",
+              "http://coletivo.cc/wp-content/uploads/2025/03/Design-sem-nome-4.jpg",
+              "http://coletivo.cc/wp-content/uploads/2023/04/IMG_0879.jpeg",
+              "http://coletivo.cc/wp-content/uploads/2023/04/IMG_6134-1.jpeg"
+            ]} 
+            onImageClick={setSelectedImg} 
+          />
         </div>
       </section>
 

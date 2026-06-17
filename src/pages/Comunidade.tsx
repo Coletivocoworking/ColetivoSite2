@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
 import { FAQ } from '../components/FAQ';
 import { 
@@ -7,10 +7,13 @@ import {
   VolumeX, 
   Wind, 
   Calendar,
-  Quote
+  Quote,
+  X,
+  ZoomIn
 } from 'lucide-react';
 
 export default function Comunidade() {
+  const [selectedImg, setSelectedImg] = useState<string | null>(null);
   useEffect(() => {
     const revealObs = new IntersectionObserver((entries) => {
       entries.forEach((e) => {
@@ -33,25 +36,25 @@ export default function Comunidade() {
       icon: <Wind size={20} />,
       title: "Yoga no Jardim",
       desc: "Aulas toda semana para começar o dia com mais energia e foco.",
-      img: "http://coletivo.cc/wp-content/uploads/2025/06/5.jpg"
+      img: "http://coletivo.cc/wp-content/uploads/2026/05/Yoga.png"
     },
     {
       icon: <Coffee size={20} />,
       title: "Café Especial",
       desc: "Cafés selecionados para você fazer uma pausa e recarregar as energias.",
-      img: "http://coletivo.cc/wp-content/uploads/2025/06/3.jpg"
+      img: "http://coletivo.cc/wp-content/uploads/2026/05/Cafe.png"
     },
     {
       icon: <VolumeX size={20} />,
       title: "Cantinhos de Foco",
       desc: "Espaços silenciosos para você trabalhar com foco total e sem interrupções.",
-      img: "http://coletivo.cc/wp-content/uploads/2025/06/1.jpg"
+      img: "http://coletivo.cc/wp-content/uploads/2026/05/Canto-Foco.png"
     },
     {
       icon: <Leaf size={20} />,
       title: "Natureza por Perto",
       desc: "Espaços que unem o conforto de dentro com a beleza dos nossos jardins.",
-      img: "http://coletivo.cc/wp-content/uploads/2025/06/7.jpg"
+      img: "http://coletivo.cc/wp-content/uploads/2026/05/Natureza.png"
     }
   ];
 
@@ -85,52 +88,36 @@ export default function Comunidade() {
 
   const events = [
     { 
-      date: "06", 
-      month: "MAI", 
-      title: "Mães e Filhos (Dia das Mães)", 
-      subtitle: "Celebração • 08:30 - 10:30",
-      cta: "SOLICITAR CONVITE",
-      img: "http://coletivo.cc/wp-content/uploads/2025/06/5.jpg"
-    },
-    { 
-      date: "08", 
-      month: "MAI", 
-      title: "Pet Day", 
-      subtitle: "Comunidade • Dia Inteiro",
-      cta: "TRAZER MEU PET",
-      img: "http://coletivo.cc/wp-content/uploads/2025/06/8.jpg"
-    },
-    { 
-      date: "13", 
-      month: "MAI", 
+      type: "fruta",
       title: "Dia da Fruta", 
-      subtitle: "Wellness • 09:00 - 11:00",
+      desc: "Coloridas, refrescantes e cheias de nutrientes, além de deliciosas, são fontes naturais de vitaminas, fibras e antioxidantes que ajudam no bem-estar e na qualidade de vida.",
       cta: "PARTICIPAR",
-      img: "http://coletivo.cc/wp-content/uploads/2025/06/2.jpg"
+      img: "http://coletivo.cc/wp-content/uploads/2026/06/1.png",
     },
     { 
-      date: "15", 
-      month: "MAI", 
-      title: "Game Night", 
-      subtitle: "Social • 18:00 - 21:00",
-      cta: "RESERVAR LUGAR",
-      img: "http://coletivo.cc/wp-content/uploads/2025/06/3.jpg"
+      type: "cuca",
+      title: "Dia da Cuca", 
+      dateText: "Dia 17 de Junho (Quarta-feira)",
+      desc: "Disponível nas copas do Coletivo",
+      cta: "VER DETALHES",
+      img: "http://coletivo.cc/wp-content/uploads/2026/06/2.png",
     },
     { 
-      date: "27", 
-      month: "MAI", 
-      title: "Círculo de Negócios Coletivo", 
-      subtitle: "Networking • 10:00 - 12:00",
-      cta: "INSCREVER-SE",
-      img: "http://coletivo.cc/wp-content/uploads/2025/06/1.jpg"
-    },
-    { 
-      date: "29", 
-      month: "MAI", 
+      type: "massage",
       title: "Quick Massage", 
-      subtitle: "Relaxe • 08:00 - 12:00",
+      subtitle: "GS Massoterapia",
+      instagram: "@gs_massoterapia",
       cta: "AGENDAR HORÁRIO",
-      img: "http://coletivo.cc/wp-content/uploads/2025/06/7.jpg"
+      img: "http://coletivo.cc/wp-content/uploads/2026/06/3.png",
+    },
+    { 
+      type: "arraia",
+      title: "ARRAIÁ COLETIVO", 
+      date: "26",
+      month: "JUNHO",
+      time: "19 HORAS",
+      cta: "CONFIRMAR PRESENÇA",
+      img: "http://coletivo.cc/wp-content/uploads/2026/06/4.png",
     }
   ];
 
@@ -170,7 +157,7 @@ export default function Comunidade() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.8 }}
             >
-              <button className="btn btn-brand h-16 px-10" onClick={() => (window as any).openModal()}>Conhecer os Espaços</button>
+              <button className="btn btn-brand" onClick={() => (window as any).openModal()}>Conhecer os Espaços</button>
             </motion.div>
           </div>
         </div>
@@ -193,7 +180,7 @@ export default function Comunidade() {
             {features.map((f, i) => (
               <div key={f.title} className="reveal group text-left" style={{ transitionDelay: `${i * 0.1}s` }}>
                 <div className="relative aspect-[3/4] overflow-hidden mb-10 rounded-[3rem] shadow-2xl">
-                  <img src={f.img} alt={f.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[2.5s] ease-out" />
+                  <img src={f.img} alt={f.title} referrerPolicy="no-referrer" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[2.5s] ease-out" />
                   <div className="absolute top-8 right-8 w-14 h-14 backdrop-blur-xl bg-white/10 flex items-center justify-center text-white rounded-[1.5rem] border border-white/20 shadow-xl group-hover:bg-brand group-hover:text-white transition-all duration-700">
                     {f.icon}
                   </div>
@@ -212,7 +199,7 @@ export default function Comunidade() {
       <section className="py-32 md:py-48 px-6 md:px-16 bg-white overflow-hidden text-left">
         <div className="max-w-7xl mx-auto">
           <div className="mb-32 space-y-12 reveal">
-            <p className="text-brand text-[0.7rem] uppercase tracking-[0.6em] font-bold font-sans italic">Quem faz parte</p>
+            <p className="text-brand text-[0.7rem] uppercase tracking-[0.6em] font-normal font-sans italic">Quem faz parte</p>
             <h2 className="font-serif text-5xl md:text-7xl text-grey-900 leading-[1.05] tracking-tighter">Nossa <br /><span className="italic text-brand font-light font-serif">Comunidade.</span></h2>
           </div>
 
@@ -225,14 +212,10 @@ export default function Comunidade() {
                     "{t.quote}"
                   </p>
                 </div>
-                <div className="flex items-center gap-8 pt-10 border-t border-grey-100">
-                  <div className="relative">
-                    <img src={t.img} alt={t.name} className="w-16 h-16 rounded-full transition-all duration-1000 object-cover border-2 border-white shadow-lg group-hover:scale-110" />
-                    <div className="absolute -inset-2 rounded-full border border-brand/10 group-hover:border-brand/40 transition-colors duration-700 pointer-events-none" />
-                  </div>
+                <div className="flex items-center pt-10 border-t border-grey-100">
                   <div>
-                    <h4 className="font-sans font-bold text-lg text-grey-900 tracking-tight leading-none mb-2">{t.name}</h4>
-                    <p className="font-sans text-[0.65rem] text-brand/60 uppercase tracking-[0.3em] font-bold italic">{t.role}</p>
+                    <h4 className="font-sans font-normal text-lg text-grey-900 tracking-tight leading-none mb-2">{t.name}</h4>
+                    <p className="font-sans text-[0.65rem] text-brand/60 uppercase tracking-[0.3em] font-normal italic">{t.role}</p>
                   </div>
                 </div>
               </div>
@@ -245,7 +228,7 @@ export default function Comunidade() {
       <section className="py-32 md:py-48 px-6 md:px-0 bg-[#F9F8F6] overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 md:px-16 mb-20">
           <div className="space-y-8 reveal">
-            <p className="text-brand text-[0.7rem] uppercase tracking-[0.6em] font-bold font-sans italic">— O que está rolando no Coletivo</p>
+            <p className="text-brand text-[0.7rem] uppercase tracking-[0.6em] font-normal font-sans italic">— O que está rolando no Coletivo</p>
             <h2 className="font-serif text-5xl md:text-7xl text-grey-900 leading-[1.05] tracking-tighter">
               Fragmentos de uma rotina <br />
               <span className="italic text-brand font-light font-serif">nada comum.</span>
@@ -269,12 +252,16 @@ export default function Comunidade() {
               "http://coletivo.cc/wp-content/uploads/2026/05/AREA_51_0022-scaled.jpg",
               "http://coletivo.cc/wp-content/uploads/2026/05/AREA_51_0003-scaled.jpg",
               "http://coletivo.cc/wp-content/uploads/2026/05/AREA_51_0015-scaled.jpg",
+              "http://coletivo.cc/wp-content/uploads/2026/05/2.jpg",
+              "http://coletivo.cc/wp-content/uploads/2026/05/4.jpg",
               // Repeat for seamless loop
               "http://coletivo.cc/wp-content/uploads/2026/05/AREA_51_0079-scaled.jpg",
               "http://coletivo.cc/wp-content/uploads/2026/05/AREA_51_0062-scaled.jpg",
               "http://coletivo.cc/wp-content/uploads/2026/05/AREA_51_0022-scaled.jpg",
               "http://coletivo.cc/wp-content/uploads/2026/05/AREA_51_0003-scaled.jpg",
-              "http://coletivo.cc/wp-content/uploads/2026/05/AREA_51_0015-scaled.jpg"
+              "http://coletivo.cc/wp-content/uploads/2026/05/AREA_51_0015-scaled.jpg",
+              "http://coletivo.cc/wp-content/uploads/2026/05/2.jpg",
+              "http://coletivo.cc/wp-content/uploads/2026/05/4.jpg"
             ].map((img, i) => (
               <div 
                 key={i} 
@@ -283,6 +270,7 @@ export default function Comunidade() {
                 <img 
                   src={img} 
                   alt={`Comunidade Coletivo ${i + 1}`} 
+                  referrerPolicy="no-referrer"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[2s] ease-out" 
                 />
                 <div className="absolute inset-0 bg-brand/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
@@ -292,53 +280,53 @@ export default function Comunidade() {
         </div>
       </section>
 
-      {/* ─── WELLNESS AGENDA ─── */}
+      {/* ─── AGENDA DE EVENTOS ─── */}
       <section className="py-32 md:py-48 px-6 md:px-16 bg-white overflow-hidden text-left">
         <div className="max-w-7xl mx-auto space-y-24">
           <div className="flex flex-col md:flex-row justify-between items-end gap-12 reveal">
             <div className="max-w-2xl space-y-8">
-              <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-bold font-sans italic">Eventos e Encontros</div>
-              <h2 className="font-serif text-6xl md:text-8xl text-grey-900 leading-[1.05] tracking-tighter">Agenda <br /><span className="italic text-brand font-light font-serif">Wellness 2026.</span></h2>
+              <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-normal font-sans italic">Eventos e Encontros</div>
+              <h2 className="font-serif text-6xl md:text-8xl text-grey-900 leading-[1.05] tracking-tighter">Agenda de Eventos <br /><span className="italic text-brand font-light font-serif">Junho 2026.</span></h2>
             </div>
             <p className="font-serif font-light text-grey-500 text-xl md:text-2xl leading-relaxed max-w-sm italic">
               Nossa agenda é feita para ajudar o seu negócio e também a sua saúde.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {events.map((e, i) => (
-              <div 
-                key={e.title} 
-                className="reveal group cursor-pointer"
-                style={{ transitionDelay: `${i * 0.1}s` }}
-              >
-                <div className="relative aspect-[3/4] rounded-[2.5rem] overflow-hidden mb-8 shadow-xl">
-                  <img 
-                    src={e.img} 
-                    alt={e.title} 
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1.5s] ease-out" 
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-700" />
-                  
-                  <div className="absolute top-8 left-8 bg-white p-4 rounded-2xl text-center min-w-[70px] shadow-2xl">
-                    <p className="font-serif text-3xl font-bold text-grey-900 leading-none">{e.date}</p>
-                    <p className="text-[0.6rem] font-bold font-sans text-brand tracking-widest mt-1">{e.month}</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {events.map((e, i) => {
+              return (
+                <div 
+                  key={e.title} 
+                  className="reveal group cursor-pointer flex flex-col h-full"
+                  style={{ transitionDelay: `${i * 0.1}s` }}
+                  onClick={() => setSelectedImg(e.img)}
+                >
+                  <div className="bg-white rounded-[2rem] overflow-hidden border border-grey-150/60 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col h-full relative">
+                    <div className="aspect-[3/4.25] w-full bg-white flex items-center justify-center p-3 relative overflow-hidden">
+                      <img 
+                        src={e.img} 
+                        alt={e.title} 
+                        referrerPolicy="no-referrer"
+                        className="w-full h-full object-contain group-hover:scale-[1.03] transition-transform duration-700 rounded-2xl" 
+                      />
+                      <div className="absolute inset-0 bg-brand/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-2xl" />
+                      
+                      {/* Zoom Indicator */}
+                      <div className="absolute bottom-5 right-5 bg-[#1F1E1C]/90 backdrop-blur-md px-3 py-2 rounded-full text-white text-[0.65rem] font-sans font-semibold tracking-wider shadow-md opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-500 flex items-center gap-1.5 z-10">
+                        <ZoomIn size={12} className="text-brand" />
+                        VER FLYER COMPLETO
+                      </div>
+                    </div>
                   </div>
-
-                  <div className="absolute bottom-8 left-8 right-8 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                    <button className="w-full h-12 bg-white text-brand text-[0.6rem] font-bold font-sans uppercase tracking-[0.2em] rounded-xl hover:bg-brand hover:text-white transition-colors duration-300 shadow-xl">
-                      {e.cta}
-                    </button>
+                  <div className="mt-4 text-center">
+                    <h3 className="font-serif text-lg text-grey-900 font-normal group-hover:text-brand transition-colors duration-300">
+                      {e.title}
+                    </h3>
                   </div>
                 </div>
-
-                <div className="space-y-3 px-2">
-                  <p className="text-brand text-[0.65rem] uppercase tracking-[0.2em] font-bold font-sans">{e.subtitle.split(' • ')[0]}</p>
-                  <h4 className="font-serif text-2xl text-grey-900 leading-tight group-hover:text-brand transition-colors">{e.title}</h4>
-                  <p className="text-grey-400 font-sans text-xs font-light tracking-wide">{e.subtitle.split(' • ')[1]}</p>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -355,7 +343,7 @@ export default function Comunidade() {
 
         <div className="relative z-10 max-w-5xl mx-auto space-y-20">
           <div className="reveal space-y-14">
-            <div className="text-brand text-[0.75rem] uppercase tracking-[0.6em] font-bold font-sans italic">Unidos em Porto Alegre</div>
+            <div className="text-brand text-[0.75rem] uppercase tracking-[0.6em] font-normal font-sans italic">Unidos em Porto Alegre</div>
             <h2 className="font-serif text-5xl md:text-7xl lg:text-8xl text-white leading-[1] tracking-tighter">Faça parte <br /><span className="italic text-brand font-light font-serif">da nossa história.</span></h2>
             <p className="text-white/60 font-serif font-light text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed italic">
               Seja o primeiro a saber de convites exclusivos e novidades sobre o jeito moderno de trabalhar.
@@ -370,13 +358,13 @@ export default function Comunidade() {
                 className="flex-grow bg-transparent px-10 py-6 rounded-full text-white placeholder:text-white/20 focus:outline-none font-serif italic text-lg"
                 required
               />
-              <button type="submit" className="btn btn-brand h-16 px-14 text-lg whitespace-nowrap shadow-2xl shadow-brand/40 hover:scale-105 transition-all duration-500">
+              <button type="submit" className="btn btn-brand whitespace-nowrap shadow-2xl shadow-brand/40 hover:scale-105 transition-all duration-500">
                 Inscrever agora
               </button>
             </form>
             <div className="flex items-center justify-center gap-4 mt-12 opacity-30 text-white">
               <Leaf size={16} />
-              <p className="text-[0.65rem] uppercase tracking-[0.5em] font-sans font-bold">
+              <p className="text-[0.65rem] uppercase tracking-[0.5em] font-sans font-normal">
                 Respeitamos sua jornada. Sem excessos, apenas curadoria.
               </p>
             </div>
@@ -390,6 +378,34 @@ export default function Comunidade() {
         title="Dúvidas sobre o dia a dia."
         subtitle="Bem-estar e Rotina"
       />
+
+      {/* ─── LIGHTBOX MODAL ─── */}
+      {selectedImg && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-md transition-all duration-300 animate-fade-in"
+          onClick={() => setSelectedImg(null)}
+        >
+          <button 
+            onClick={() => setSelectedImg(null)}
+            className="absolute top-6 right-6 text-white/80 hover:text-white bg-white/10 hover:bg-white/20 p-3 rounded-full transition-all duration-300 z-50 cursor-pointer"
+            aria-label="Fechar"
+          >
+            <X size={24} />
+          </button>
+          
+          <div 
+            className="relative max-w-[90vw] max-h-[90vh] p-4 flex items-center justify-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img 
+              src={selectedImg} 
+              alt="Flyer ampliado" 
+              referrerPolicy="no-referrer"
+              className="max-w-full max-h-[85vh] object-contain rounded-2xl shadow-2xl border border-white/10"
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 }

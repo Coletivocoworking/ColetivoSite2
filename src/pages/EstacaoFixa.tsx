@@ -74,7 +74,7 @@ export default function EstacaoFixa() {
 
             <div className="flex flex-wrap gap-6 pt-6">
               <button 
-                className="btn btn-brand h-16 px-16 text-lg"
+                className="btn btn-brand"
                 onClick={() => (window as any).openModal?.('Estação Fixa')}
               >
                 Agendar Visita
@@ -88,7 +88,7 @@ export default function EstacaoFixa() {
       <section className="py-32 md:py-56 px-6 md:px-16 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 xl:gap-32 items-center">
           <div className="reveal space-y-12">
-            <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-bold">Trabalho Fixo</div>
+            <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-normal">Trabalho Fixo</div>
             <h2 className="font-serif text-4xl md:text-7xl text-grey-900 leading-[0.9] tracking-tighter">
               Sua mesa está <br />
               <span className="italic text-brand font-light uppercase text-3xl md:text-5xl tracking-[0.2em] block mt-4">sempre pronta.</span>
@@ -128,7 +128,7 @@ export default function EstacaoFixa() {
               </p>
               <div className="mt-8 flex items-center gap-4">
                 <div className="w-8 h-px bg-grey-100" />
-                <span className="text-[0.6rem] uppercase tracking-[0.2em] font-sans font-bold text-grey-400 font-bold">Membro Coletivo</span>
+                <span className="text-[0.6rem] uppercase tracking-[0.2em] font-sans font-normal text-grey-400">Membro Coletivo</span>
               </div>
             </div>
           </div>
@@ -139,7 +139,7 @@ export default function EstacaoFixa() {
       <section className="py-32 md:py-56 bg-grey-50 border-y border-grey-100">
         <div className="max-w-7xl mx-auto px-6 md:px-16">
           <div className="text-center max-w-3xl mx-auto mb-24 reveal">
-            <p className="text-brand text-[0.7rem] uppercase tracking-[0.5em] mb-8 font-sans font-bold">Resident Privileges</p>
+            <p className="text-brand text-[0.7rem] uppercase tracking-[0.5em] mb-8 font-sans font-normal">Resident Privileges</p>
             <h2 className="font-serif text-4xl md:text-7xl text-grey-900 leading-[0.9] tracking-tighter mb-10">Tudo o que você <br /><span className="italic text-brand font-light">precisa para focar.</span></h2>
             <p className="font-serif font-light text-grey-500 text-lg leading-relaxed">Seu trabalho não pode parar. Cada detalhe foi pensado para ajudar você a produzir muito mais.</p>
           </div>
@@ -183,7 +183,7 @@ export default function EstacaoFixa() {
           
           <div className="reveal order-1 lg:order-2 space-y-16">
             <div className="space-y-10">
-              <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-bold">Saúde e Foco</div>
+              <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-normal">Saúde e Foco</div>
               <h2 className="font-serif text-4xl md:text-7xl text-grey-900 leading-[0.9] tracking-tighter">Privacidade em <br /><span className="italic text-brand font-light uppercase text-3xl md:text-5xl tracking-[0.2em] block mt-4">ecossistema vivo.</span></h2>
               <p className="font-serif font-light text-grey-500 text-lg md:text-xl leading-relaxed">
                 Nossas áreas Resident são posicionadas estrategicamente para garantir o silêncio e o foco que tarefas complexas exigem, mantendo a conectividade visual com o pulsar da nossa rede criativa.
@@ -221,7 +221,7 @@ export default function EstacaoFixa() {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-8 pt-8">
             <button 
-              className="btn btn-brand h-16 px-16 text-lg"
+              className="btn btn-brand"
               onClick={() => (window as any).openModal?.('Estação Fixa')}
             >
               Agendar Visita

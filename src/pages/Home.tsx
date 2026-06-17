@@ -37,11 +37,11 @@ export default function Home() {
           <video className="w-full h-full object-cover scale-110" autoPlay loop muted playsInline>
             <source src="http://coletivo.cc/wp-content/uploads/2026/04/Video-Coletivo.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/40" />
         </div>
         
         <div className="relative z-10 max-w-7xl mx-auto w-full text-left">
-          <h1 className="display-1 text-white mb-8 tracking-tighter leading-[1.05] md:leading-[1]">
+          <h1 className="display-hero text-white mb-8 tracking-tighter leading-[1.05] md:leading-[1]">
             <motion.span className="block" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.4, duration: 1, ease: [0.16, 1, 0.3, 1] }}>Onde seu</motion.span>
             <motion.span className="block" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.55, duration: 1, ease: [0.16, 1, 0.3, 1] }}>trabalho encontra</motion.span>
             <motion.span className="block italic font-light text-brand font-serif" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.7, duration: 1, ease: [0.16, 1, 0.3, 1] }}>excelência.</motion.span>
@@ -53,12 +53,12 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.9, duration: 0.8 }}
           >
-            <p className="text-white/60 font-serif font-light text-xl md:text-2xl max-w-lg leading-relaxed italic">
+            <p className="body-lead text-white/60 max-w-lg">
               Mais que um escritório, um ecossistema de pessoas, conexões e evolução. Um lugar que eleva sua rotina, seu foco e sua forma de trabalhar.
             </p>
             <div className="flex gap-8">
-              <button className="btn btn-brand h-16 px-10" onClick={() => (window as any).openModal?.()}>Agendar Visita</button>
-              <Link to="/sobre" className="btn btn-outline-white h-16 px-10">O Manifesto</Link>
+              <button className="btn btn-brand" onClick={() => (window as any).openModal?.()}>Agendar Visita</button>
+              <Link to="/sobre" className="btn btn-outline-white">O Manifesto</Link>
             </div>
           </motion.div>
         </div>
@@ -76,9 +76,9 @@ export default function Home() {
           />
         </div>
           <div className="reveal space-y-8" style={{ transitionDelay: '.15s' }}>
-            <p className="text-brand text-[0.7rem] uppercase tracking-[0.3em] font-medium font-sans">Sobre o Coletivo</p>
-            <h2 className="font-serif text-4xl md:text-6xl text-black leading-tight">Onde produtividade encontra propósito.</h2>
-            <div className="font-serif font-light text-grey-500 text-lg leading-relaxed space-y-6">
+            <p className="tag-label">Sobre o Coletivo</p>
+            <h2 className="display-section text-grey-900 leading-tight">Onde produtividade encontra propósito.</h2>
+            <div className="body-main text-grey-500 space-y-6">
               <p>
                 No Coletivo, acreditamos que o ambiente certo faz toda a diferença.
                 Cada espaço foi pensado para ajudar você a focar e criar parcerias de verdade.
@@ -89,7 +89,7 @@ export default function Home() {
               <p>
                 Mais do que um coworking, somos uma comunidade de pessoas que buscam o lugar ideal para transformar suas ideias em realidade.
               </p>
-              <p className="text-brand font-bold pt-4 italic">
+              <p className="text-brand pt-4 italic">
                 Nossos endereços são o ponto de partida para um novo jeito de trabalhar.
               </p>
             </div>
@@ -101,15 +101,15 @@ export default function Home() {
       <div className="bg-white py-20 px-6 md:px-16 grid grid-cols-1 md:grid-cols-3 gap-12 text-center border-y border-grey-100">
         <div className="reveal space-y-2">
           <div className="font-serif text-5xl text-brand">2</div>
-          <div className="text-[0.6rem] uppercase tracking-[0.2em] text-grey-500 font-sans">Espaços em Petrópolis</div>
+          <div className="body-caps text-grey-500">Espaços em Petrópolis</div>
         </div>
         <div className="reveal space-y-2" style={{ transitionDelay: '.1s' }}>
           <div className="font-serif text-5xl text-brand">500+</div>
-          <div className="text-[0.6rem] uppercase tracking-[0.2em] text-grey-500 font-sans">Empresas Ativas</div>
+          <div className="body-caps text-grey-500">Empresas Ativas</div>
         </div>
         <div className="reveal space-y-2" style={{ transitionDelay: '.2s' }}>
           <div className="font-serif text-5xl text-brand">24/7</div>
-          <div className="text-[0.6rem] uppercase tracking-[0.2em] text-grey-500 font-sans">Acesso Garantido</div>
+          <div className="body-caps text-grey-500">Acesso Garantido</div>
         </div>
       </div>
 
@@ -118,11 +118,11 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center mb-24">
             <div className="reveal space-y-8">
-              <p className="text-brand text-[0.7rem] uppercase tracking-[0.3em] font-medium font-sans">Ecossistema</p>
-              <h2 className="font-serif text-5xl md:text-7xl text-black leading-tight tracking-tighter">Muito mais que um espaço.<br /><span className="italic text-brand">O lugar onde seu negócio cresce.</span></h2>
+              <p className="tag-label">Ecossistema</p>
+              <h2 className="display-section text-grey-900 leading-tight tracking-tighter">Muito mais que um espaço.<br /><span className="italic text-brand font-light">O lugar onde seu negócio cresce.</span></h2>
             </div>
             <div className="reveal" style={{ transitionDelay: '.15s' }}>
-              <p className="font-serif font-light text-grey-500 text-xl leading-relaxed">
+              <p className="body-lead text-grey-500">
                 O Coletivo é o ponto de encontro de quem quer fazer acontecer. Um ambiente vivo para criar parcerias, trocar ideias e crescer ao lado de pessoas que inspiram.
               </p>
             </div>
@@ -153,8 +153,6 @@ export default function Home() {
               </div>
             ))}
           </div>
-          
-
         </div>
       </section>
 
@@ -162,42 +160,39 @@ export default function Home() {
       <section id="comunidade-teaser" className="py-24 md:py-40 px-6 md:px-16 bg-[#F9F8F6]">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <div className="reveal space-y-8">
-            <p className="text-brand text-[0.7rem] uppercase tracking-[0.3em] font-medium font-sans">Vida no Coletivo</p>
-            <h2 className="font-serif text-4xl md:text-6xl text-black leading-tight tracking-tight">Não é só sobre salas.<br /><span className="italic text-brand">É sobre conectar pessoas.</span></h2>
-            <p className="font-serif font-light text-grey-500 text-lg leading-relaxed">
+            <p className="tag-label">Vida no Coletivo</p>
+            <h2 className="display-section text-grey-900 leading-tight">Não é só sobre salas.<br /><span className="italic text-brand font-light">É sobre conectar pessoas.</span></h2>
+            <p className="body-lead text-grey-500">
               Grandes parcerias nascem nos momentos de troca. Criamos um ambiente vivo onde o café vira oportunidade e as conversas nos corredores impulsionam o seu negócio.
             </p>
-
           </div>
 
           <div className="reveal grid grid-cols-2 gap-4" style={{ transitionDelay: '.2s' }}>
             <div className="space-y-4">
               <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-lg">
-                <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=600&q=80" alt="Yoga no Jardim" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+                <img src="http://coletivo.cc/wp-content/uploads/2026/05/Natureza.png" alt="Natureza" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
               </div>
               <div className="aspect-square rounded-3xl overflow-hidden shadow-lg">
-                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80" alt="Café Orgânico" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+                <img src="http://coletivo.cc/wp-content/uploads/2026/05/Cafe.png" alt="Café" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
               </div>
             </div>
             <div className="space-y-4 pt-12">
               <div className="aspect-square rounded-3xl overflow-hidden shadow-lg">
-                <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=600&q=80" alt="Zonas de Silêncio" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+                <img src="http://coletivo.cc/wp-content/uploads/2026/05/Canto-Foco.png" alt="Canto e Foco" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
               </div>
               <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-lg">
-                <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" alt="Design Biofílico" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+                <img src="http://coletivo.cc/wp-content/uploads/2026/05/Yoga.png" alt="Yoga" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-
-
       {/* ──────────────────────── MANIFESTO ──────────────────────── */}
       <section id="manifesto" className="py-24 md:py-40 px-6 md:px-16 bg-white">
         <div className="max-w-4xl mb-20">
-          <p className="text-brand text-[0.7rem] uppercase tracking-[0.3em] mb-6 reveal font-sans">Essência</p>
-          <h2 className="font-serif text-4xl md:text-6xl text-black leading-tight reveal" style={{ transitionDelay: '.1s' }}>O que acreditamos.</h2>
+          <p className="tag-label">Essência</p>
+          <h2 className="display-section text-grey-900 leading-tight">O que acreditamos.</h2>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-20">
@@ -207,8 +202,8 @@ export default function Home() {
                 <path d="M12 5v2" /><path d="m5 21 6-14" /><path d="m19 21-6-14" /><path d="M8 14h8" /><circle cx="12" cy="4" r="1" />
               </svg>
             </div>
-            <h3 className="font-serif text-2xl text-black">Arquitetura & Memória</h3>
-            <p className="font-sans font-light text-grey-500 leading-relaxed text-sm">Não restauramos o passado por nostalgia. Restauramos porque o que foi construído com rigor merece continuar de pé.</p>
+            <h3 className="display-subsection text-grey-900">Arquitetura & Memória</h3>
+            <p className="body-main text-grey-500">Não restauramos o passado por nostalgia. Restauramos porque o que foi construído com rigor merece continuar de pé.</p>
           </div>
           
           <div className="reveal space-y-6" style={{ transitionDelay: '.2s' }}>
@@ -217,8 +212,8 @@ export default function Home() {
                 <rect x="3" y="15" width="18" height="5" rx="1" /><path d="M6 18h.01" /><path d="M9 18h.01" /><path d="M12 15V9" /><path d="M8.5 11.5a5 5 0 0 1 7 0" /><path d="M5.5 8.5a9 9 0 0 1 13 0" />
               </svg>
             </div>
-            <h3 className="font-serif text-2xl text-black">Infraestrutura</h3>
-            <p className="font-serif font-light text-grey-500 leading-relaxed text-sm">Funcionalidade imperceptível é o nosso foco. Conectividade, tecnologia e mobiliário desaparecem para que o trabalho apareça.</p>
+            <h3 className="display-subsection text-grey-900">Infraestrutura</h3>
+            <p className="body-main text-grey-500">Funcionalidade imperceptível é o nosso foco. Conectividade, tecnologia e mobiliário desaparecem para que o trabalho apareça.</p>
           </div>
 
           <div className="reveal space-y-6" style={{ transitionDelay: '.25s' }}>
@@ -227,8 +222,8 @@ export default function Home() {
                 <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />
               </svg>
             </div>
-            <h3 className="font-serif text-2xl text-black">Encontros</h3>
-            <p className="font-serif font-light text-grey-500 leading-relaxed text-sm">No Coletivo, os melhores projetos nascem no intervalo entre uma reunião e outra.</p>
+            <h3 className="display-subsection text-grey-900">Encontros</h3>
+            <p className="body-main text-grey-500">No Coletivo, os melhores projetos nascem no intervalo entre uma reunião e outra.</p>
           </div>
         </div>
       </section>
@@ -236,25 +231,23 @@ export default function Home() {
       {/* ──────────────────────── ESPAÇO ──────────────────────── */}
       <section id="espaco" className="h-[80vh] flex flex-col md:flex-row bg-black overflow-hidden">
         <div 
-          className="split-panel group cursor-pointer" 
-          onClick={() => navigate('/unidades/casa-62')} 
+          className="split-panel group select-none" 
         >
           <img src="http://coletivo.cc/wp-content/uploads/2025/06/6.jpg" alt="Casa 62" className="split-bg" loading="lazy" />
           <div className="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-colors duration-1000" />
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-12 translate-y-4 group-hover:translate-y-0 transition-transform duration-1000">
-            <div className="text-white/30 text-[0.7rem] tracking-[0.6em] mb-4 font-sans font-bold">01</div>
+            <div className="text-white/30 text-[0.7rem] tracking-[0.6em] mb-4 font-sans font-normal">01</div>
             <h3 className="font-serif text-white text-5xl md:text-7xl mb-4">Casa 62</h3>
             <p className="text-white/40 text-[0.65rem] uppercase tracking-[0.3em] font-sans">Rua Jaime Telles, 62</p>
           </div>
         </div>
         <div 
-          className="split-panel group border-t md:border-t-0 md:border-l border-white/5 cursor-pointer" 
-          onClick={() => navigate('/unidades/area-51')}
+          className="split-panel group border-t md:border-t-0 md:border-l border-white/5 select-none" 
         >
           <img src="http://coletivo.cc/wp-content/uploads/2025/03/Design-sem-nome-4.jpg" alt="Area 51" className="split-bg" loading="lazy" />
           <div className="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-colors duration-1000" />
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-12 translate-y-4 group-hover:translate-y-0 transition-transform duration-1000">
-            <div className="text-white/30 text-[0.7rem] tracking-[0.6em] mb-4 font-sans font-bold">02</div>
+            <div className="text-white/30 text-[0.7rem] tracking-[0.6em] mb-4 font-sans font-normal">02</div>
             <h3 className="font-serif text-white text-5xl md:text-7xl mb-4">Area 51</h3>
             <p className="text-white/40 text-[0.65rem] uppercase tracking-[0.3em] font-sans">Av. Lucas de Oliveira, 894</p>
           </div>
@@ -264,14 +257,14 @@ export default function Home() {
       {/* ──────────────────────── INFRAESTRUTURA ──────────────────────── */}
       <section id="infraestrutura" className="py-24 md:py-40 px-6 md:px-16 bg-grey-100">
         <div className="max-w-4xl mb-20">
-          <p className="text-brand text-[0.7rem] uppercase tracking-[0.3em] mb-6 reveal font-sans">Infraestrutura</p>
-          <h2 className="font-serif text-4xl md:text-6xl text-black leading-tight reveal" style={{ transitionDelay: '.1s' }}>Excelência em cada detalhe</h2>
+          <p className="tag-label">Infraestrutura</p>
+          <h2 className="display-section text-grey-900 leading-tight">Excelência em cada detalhe</h2>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
           {[
-            { title: 'Escritórios Privativos', desc: 'Suítes corporativas exclusivas com máxima privacidade e personalização.', link: '/espacos/privativo-empresa' },
-            { title: 'Sala de Reunião', desc: 'Ambientes equipados com tecnologia Pro-AV para decisões de alto impacto.', link: '/espacos/sala-reuniao' },
+            { title: 'Escritórios Privativos', desc: 'Escritórios corporativos exclusivos com máxima privacidade e personalização.', link: '/espacos/privativo-empresa' },
+            { title: 'Sala de Reunião', desc: 'Salas equipadas e confortáveis para suas decisões com café fresquinho sempre à disposição.', link: '/espacos/sala-reuniao' },
             { title: 'Escritórios Startups', desc: 'Espaços dinâmicos para times em fase de tração e crescimento acelerado.', link: '/espacos/privativo-startup' },
             { title: 'Endereço Comercial', desc: 'Sua empresa sediada nos endereços mais desejados de Porto Alegre.', link: '/empresas/endereco-comercial' },
             { title: 'Estação Rotativa', desc: 'Liberdade e networking em ambientes inspiradores e flexíveis.', link: '/espacos/estacao-rotativa' },
@@ -279,10 +272,10 @@ export default function Home() {
           ].map((item, i) => (
             <div key={item.title} className="reveal service-card group" style={{ transitionDelay: `${i * 0.1}s` }}>
               <div className="w-12 h-px bg-brand mb-8 transition-all duration-700 group-hover:w-20" />
-              <h3 className="font-serif text-2xl text-black mb-4">{item.title}</h3>
-              <p className="font-sans font-light text-grey-500 leading-relaxed text-sm mb-10">{item.desc}</p>
+              <h3 className="display-subsection text-grey-900 mb-4">{item.title}</h3>
+              <p className="body-main text-grey-500 mb-10">{item.desc}</p>
               {item.link && (
-                <Link to={item.link} className="inline-flex items-center gap-3 text-brand text-[0.65rem] uppercase tracking-widest font-bold group-hover:gap-5 transition-all duration-500">
+                <Link to={item.link} className="inline-flex items-center gap-3 text-brand text-[0.65rem] uppercase tracking-widest group-hover:gap-5 transition-all duration-500">
                   Explorar plano <ArrowRight size={14} />
                 </Link>
               )}
@@ -297,9 +290,9 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 xl:gap-32 items-center">
             <div className="reveal space-y-10">
               <div className="space-y-6">
-                <p className="text-brand text-[0.7rem] uppercase tracking-[0.4em] font-bold font-sans">Eventos</p>
-                <h2 className="font-serif text-5xl md:text-7xl text-black leading-[1.1] tracking-tighter">O cenário ideal <br /><span className="italic text-brand font-light">para o seu evento corporativo.</span></h2>
-                <p className="text-grey-500 font-serif text-xl font-light leading-relaxed">
+                <p className="tag-label">Eventos</p>
+                <h2 className="display-section text-grey-900 leading-[1.1] tracking-tighter">O cenário ideal <br /><span className="italic text-brand font-light">para o seu evento corporativo.</span></h2>
+                <p className="body-lead text-grey-500">
                   Espaços exclusivos para workshops, treinamentos, reuniões estratégicas e experiências de marca no coração de Porto Alegre. Ambientes projetados para inspirar e gerar conexões de alto nível.
                 </p>
               </div>
@@ -312,8 +305,8 @@ export default function Home() {
                   { title: "Meetings", desc: "Salas de board para decisões que mudam o jogo." }
                 ].map((item, i) => (
                   <div key={item.title} className="space-y-2">
-                    <h4 className="font-serif text-xl text-black">{item.title}</h4>
-                    <p className="text-sm text-grey-400 font-sans font-light">{item.desc}</p>
+                    <h4 className="display-subsection text-grey-900">{item.title}</h4>
+                    <p className="body-main text-grey-400">{item.desc}</p>
                   </div>
                 ))}
               </div>
@@ -321,7 +314,7 @@ export default function Home() {
               <div className="pt-6">
                 <button 
                   onClick={() => (window as any).openModal?.('Locação Eventos')}
-                  className="btn btn-brand h-16 px-12"
+                  className="btn btn-brand"
                 >
                   Consultar Disponibilidade
                 </button>
@@ -347,47 +340,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ──────────────────────── PARCERIAS ──────────────────────── */}
-      <section id="parcerias" className="py-24 md:py-40 px-6 md:px-16 bg-black text-white overflow-hidden">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-          <div className="space-y-10">
-            <p className="text-white/40 text-[0.7rem] uppercase tracking-[0.3em] reveal font-sans">Para Marcas</p>
-            <h2 className="font-serif text-4xl md:text-6xl leading-tight reveal" style={{ transitionDelay: '.1s' }}>O ambiente onde sua marca é vista importa tanto quanto o que ela comunica.</h2>
-            <p className="font-serif font-light text-white/50 text-lg leading-relaxed reveal" style={{ transitionDelay: '.15s' }}>
-              O Coletivo reúne líderes, executivos e profissionais que tomam decisões todos os dias, no mesmo endereço. Marcas que escolhem estar aqui não buscam exposição genérica. Buscam associação intencional.
-            </p>
-            <ul className="space-y-4 reveal" style={{ transitionDelay: '.2s' }}>
-              {[
-                'Presença diária nos espaços onde decisões acontecem',
-                'Ativações e product placement em ambiente de alto valor',
-                'Co-criação de eventos e experiências exclusivas para os membros',
-                'Associação direta a um padrão de excelência reconhecível',
-                'Acesso a uma rede de fundadores e executivos de Porto Alegre e região.'
-              ].map((benefit) => (
-                <li key={benefit} className="flex items-center gap-4 text-sm font-light text-white/70 font-sans">
-                  <span className="w-1.5 h-1.5 bg-brand rounded-full" />
-                  {benefit}
-                </li>
-              ))}
-            </ul>
-            <div className="reveal pt-4" style={{ transitionDelay: '.3s' }}>
-              <button className="btn btn-white" onClick={() => (window as any).openModal?.()}>Falar sobre Patrocínios</button>
-            </div>
-          </div>
-          <div className="reveal relative" style={{ transitionDelay: '.2s' }}>
-            <div className="aspect-[4/5] overflow-hidden rounded-xl">
-              <img 
-                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80" 
-                alt="Ativação de Marcas" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="absolute -bottom-6 -left-6 bg-brand p-8 rounded-lg hidden md:block">
-              <p className="text-white font-serif text-xl italic text-brand-dark">Ativações de marca e eventos corporativos - Eventos para marcas que entendem o valor do ambiente.</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ──────────────────────── CTA REMOVED ──────────────────────── */}
 
@@ -405,12 +357,12 @@ export default function Home() {
               <div className="w-12 h-12 rounded-full bg-brand/20 flex items-center justify-center text-brand">
                 <Mic size={24} />
               </div>
-              <p className="text-brand text-[0.7rem] uppercase tracking-[0.3em] font-bold font-sans">Coletivo Podcast</p>
+              <p className="tag-label">Coletivo Podcast</p>
             </div>
             
-            <h2 className="font-serif text-4xl md:text-7xl leading-tight">Quem constrói negócios tem muito a dizer.<br /><span className="italic text-brand">Nós perguntamos. Eles respondem.</span></h2>
+            <h2 className="display-section text-white leading-tight">Quem constrói negócios tem muito a dizer.<br /><span className="italic text-brand font-light">Nós perguntamos. Eles respondem.</span></h2>
             
-            <p className="font-serif font-light text-white/40 text-lg md:text-xl leading-relaxed">
+            <p className="body-lead text-white/40">
               Conversas profundas com empreendedores, criativos e líderes que estão moldando o futuro dos negócios em Porto Alegre e no mundo.
             </p>
 
@@ -433,7 +385,7 @@ export default function Home() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
               <div className="absolute bottom-8 left-8 right-8">
-                <p className="text-brand text-[0.6rem] uppercase tracking-widest mb-2 font-sans font-bold">Último Episódio</p>
+                <p className="text-brand text-[0.6rem] uppercase tracking-widest mb-2 font-sans font-normal">Último Episódio</p>
                 <h3 className="font-serif text-2xl text-white">Nutrição, Bem-estar e Produtividade no Trabalho</h3>
               </div>
             </div>

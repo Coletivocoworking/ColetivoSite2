@@ -108,7 +108,7 @@ export default function SalaReuniao() {
       <section className="py-32 md:py-64 px-6 md:px-16 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 xl:gap-32 items-center">
           <div className="reveal space-y-12 text-left">
-            <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-bold">Privacidade e Qualidade</div>
+            <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-normal">Privacidade e Qualidade</div>
             <h2 className="font-serif text-4xl md:text-7xl text-grey-900 leading-[0.9] tracking-tighter">
               Onde o futuro é <br />
               <span className="italic text-brand font-light uppercase text-3xl md:text-5xl tracking-[0.2em] block mt-4">construído.</span>
@@ -152,7 +152,7 @@ export default function SalaReuniao() {
       <section className="py-32 md:py-64 bg-grey-50 border-y border-grey-100">
         <div className="max-w-7xl mx-auto px-6 md:px-16 text-left">
           <div className="text-left mb-32 reveal">
-            <p className="text-brand text-[0.7rem] uppercase tracking-[0.5em] mb-8 font-bold font-sans italic">Temos a sala ideal para você</p>
+            <p className="text-brand text-[0.7rem] uppercase tracking-[0.5em] mb-8 font-sans italic">Temos a sala ideal para você</p>
             <h2 className="font-serif text-4xl md:text-7xl lg:text-8xl text-grey-900 tracking-tighter leading-[0.8]">Formatos de <br /><span className="italic text-brand font-light uppercase text-3xl md:text-5xl tracking-[0.22em] block mt-8">alta qualidade.</span></h2>
           </div>
 
@@ -165,7 +165,7 @@ export default function SalaReuniao() {
               >
                 <div className="aspect-[4/3] overflow-hidden relative">
                   <img src={type.img} alt={type.title} className="w-full h-full object-cover group-hover:scale-110 transition-all duration-[2s] ease-out" />
-                  <div className="absolute top-10 right-10 bg-white/90 backdrop-blur-md text-brand px-5 py-2 rounded-full text-[0.6rem] uppercase tracking-[0.2em] font-sans font-bold shadow-xl border border-grey-100/50 flex items-center gap-2">
+                  <div className="absolute top-10 right-10 bg-white/90 backdrop-blur-md text-brand px-5 py-2 rounded-full text-[0.6rem] uppercase tracking-[0.2em] font-sans font-normal shadow-xl border border-grey-100/50 flex items-center gap-2">
                     <Users size={12} />
                     {type.capacity}
                   </div>
@@ -187,7 +187,7 @@ export default function SalaReuniao() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 xl:gap-32 items-center">
             <div className="reveal space-y-16">
               <div className="space-y-8">
-                <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-bold italic">Simples e fácil de usar</div>
+                <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-normal italic">Simples e fácil de usar</div>
                 <h2 className="font-serif text-4xl md:text-7xl leading-[0.9] tracking-tighter text-white">Inteligência que <br /><span className="italic text-brand font-light">ajuda você.</span></h2>
                 <p className="font-serif font-light text-white/40 text-lg md:text-2xl leading-relaxed">
                   Tudo é pensado para ser simples. Você chega, conecta seu computador e começa a usar tudo em segundos.
@@ -226,7 +226,7 @@ export default function SalaReuniao() {
       <section className="py-32 md:py-64 px-6 md:px-16 bg-white text-center sm:text-left">
         <div className="max-w-6xl mx-auto space-y-24">
           <div className="reveal space-y-8 text-center md:text-left">
-             <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-bold italic">Reserva Simples</div>
+             <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-normal italic">Reserva Simples</div>
             <h2 className="display-1 text-grey-900 leading-[0.8] tracking-tighter">Agende <br /><span className="italic text-brand font-light italic">agora.</span></h2>
           </div>
 
@@ -250,14 +250,14 @@ export default function SalaReuniao() {
 
           <div className="pt-20 reveal border-t border-grey-50 text-center">
             <button 
-              className="btn btn-brand h-16 px-12 text-lg shadow-xl shadow-brand/20 transition-all duration-500"
+              className="btn btn-brand shadow-xl shadow-brand/20 transition-all duration-500"
               onClick={() => (window as any).openModal?.('Sala de Reunião')}
             >
               Falar com nossa Equipe
             </button>
             <div className="mt-16 flex items-center justify-center gap-6">
               <div className="w-12 h-px bg-grey-100" />
-              <p className="text-grey-400 font-serif font-light text-2xl italic tracking-tight">A partir de <span className="text-grey-900 font-bold not-italic font-sans">R$ 120 / hora</span></p>
+              <p className="text-grey-400 font-serif font-light text-2xl italic tracking-tight">A partir de <span className="text-grey-900 font-normal not-italic font-sans">R$ 120 / hora</span></p>
               <div className="w-12 h-px bg-grey-100" />
             </div>
           </div>

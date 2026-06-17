@@ -29,12 +29,12 @@ export const FAQ: React.FC<FAQProps> = ({
   return (
     <section className={`py-24 md:py-40 px-6 md:px-16 ${className}`}>
       <div className="max-w-3xl mx-auto">
-        <div className="text-center mb-24 reveal">
-          <p className="text-brand text-[0.65rem] uppercase tracking-[0.5em] mb-8 font-bold font-sans italic">{subtitle}</p>
-          <h2 className="font-serif text-4xl md:text-6xl text-grey-900 leading-tight tracking-tighter italic">{title}</h2>
+        <div className="text-center mb-16 reveal">
+          <p className="tag-label">{subtitle}</p>
+          <h2 className="display-section text-grey-900 italic">{title}</h2>
         </div>
 
-        <div className="space-y-6 reveal">
+        <div className="space-y-4 reveal">
           {items.map((faq, i) => (
             <motion.details 
               key={i} 
@@ -42,13 +42,13 @@ export const FAQ: React.FC<FAQProps> = ({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="bg-white rounded-3xl p-8 cursor-pointer group hover:shadow-xl transition-all duration-500 border border-transparent hover:border-brand/10"
+              className="bg-white rounded-2xl p-5 md:p-6 cursor-pointer group transition-all duration-300 border border-grey-100 hover:border-brand/20 hover:shadow-sm"
             >
-              <summary className="font-serif text-xl italic text-grey-900 list-none flex justify-between items-center pr-4">
+              <summary className="font-serif text-sm md:text-base text-grey-900 list-none flex justify-between items-center pr-2 font-normal italic select-none">
                 {faq.q}
-                <span className="text-brand transition-transform group-open:rotate-45 text-2xl">+</span>
+                <span className="text-brand transition-transform duration-300 group-open:rotate-45 text-xl font-light ml-4">+</span>
               </summary>
-              <div className="mt-6 font-serif font-light text-grey-500 leading-relaxed italic border-t border-grey-50 pt-6">
+              <div className="mt-4 font-serif text-xs md:text-sm font-light text-grey-500 italic border-t border-grey-50 pt-4 leading-relaxed">
                 {faq.a}
               </div>
             </motion.details>

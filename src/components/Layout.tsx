@@ -487,7 +487,7 @@ export default function Layout({ children }: LayoutProps) {
           </div>
           
           <div className="space-y-8">
-            <h4 className="text-[0.7rem] uppercase tracking-[0.3em] font-bold font-sans">Espaços</h4>
+            <h4 className="text-[0.7rem] uppercase tracking-[0.3em] font-normal font-sans">Espaços</h4>
             <ul className="space-y-6">
               <li>
                 <Link to="/unidades/casa-62" className="group">
@@ -505,7 +505,7 @@ export default function Layout({ children }: LayoutProps) {
           </div>
 
           <div className="space-y-8">
-            <h4 className="text-[0.7rem] uppercase tracking-[0.3em] font-bold font-sans">Navegação</h4>
+            <h4 className="text-[0.7rem] uppercase tracking-[0.3em] font-normal font-sans">Navegação</h4>
             <ul className="space-y-4">
               {navLinks.map((item) => (
                 <li key={item.name}>
@@ -519,7 +519,7 @@ export default function Layout({ children }: LayoutProps) {
           </div>
 
           <div className="space-y-8">
-            <h4 className="text-[0.7rem] uppercase tracking-[0.3em] font-bold font-sans">Novidades</h4>
+            <h4 className="text-[0.7rem] uppercase tracking-[0.3em] font-normal font-sans">Novidades</h4>
             <p className="text-white/40 text-sm font-sans">Receba dicas e novidades sobre o mercado local.</p>
             <form className="relative">
               <input type="email" placeholder="Seu e-mail" className="w-full bg-white/5 border-b border-white/10 py-4 outline-none focus:border-brand transition-colors text-sm font-sans" />

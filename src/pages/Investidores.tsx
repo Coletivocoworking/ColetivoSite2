@@ -61,7 +61,7 @@ const Investidores = () => {
               className="text-center md:text-left"
             >
               <div className="text-4xl md:text-5xl font-serif text-grey-900 mb-2">{stat.value}</div>
-              <div className="text-sm uppercase tracking-widest text-grey-400 font-sans font-bold">{stat.label}</div>
+              <div className="text-sm uppercase tracking-widest text-grey-400 font-sans font-normal">{stat.label}</div>
             </motion.div>
           ))}
         </div>
@@ -101,7 +101,7 @@ const Investidores = () => {
                   },
                   { 
                     icon: <TrendingUp size={24} />, 
-                    title: 'Newsletter VIP', 
+                    title: 'Newsletter Exclusiva', 
                     desc: 'Reach direto na caixa de entrada dos tomadores de decisão da nossa base.' 
                   }
                 ].map((item, i) => (
@@ -174,7 +174,7 @@ const Investidores = () => {
           <div className="mt-24 text-center">
             <a 
               href="https://wa.me/5524992644262" 
-              className="inline-flex items-center gap-4 bg-brand text-white px-12 py-6 rounded-full font-sans font-bold tracking-widest text-sm hover:scale-105 hover:bg-brand-dark transition-all duration-500 group"
+              className="inline-flex items-center gap-4 bg-brand text-white px-12 py-6 rounded-full font-sans font-normal tracking-widest text-sm hover:scale-105 hover:bg-brand-dark transition-all duration-500 group"
             >
               SOLICITAR APRESENTAÇÃO DE FRANQUIA 
               <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform" />
@@ -196,7 +196,7 @@ const Investidores = () => {
           <div className="flex flex-col md:flex-row items-center justify-center gap-6">
             <a 
               href="mailto:contato@coletivo.cc" 
-              className="bg-white text-black px-12 py-6 rounded-full font-sans font-bold tracking-widest text-sm hover:scale-105 transition-all duration-500 w-full md:w-auto"
+              className="bg-white text-black px-12 py-6 rounded-full font-sans font-normal tracking-widest text-sm hover:scale-105 transition-all duration-500 w-full md:w-auto"
             >
               FALAR COM DIRETORIA
             </a>

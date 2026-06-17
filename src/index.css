@@ -15,6 +15,21 @@
   
   --spacing-nav: 80px;
   --spacing-nav-scrolled: 70px;
+
+  /* ─── UNIFIED FONT SIZING SYSTEM ─────────────────────── */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 2.75rem;
+  --text-6xl: 3.5rem;
+  --text-7xl: 4.5rem;
+  --text-8xl: 5.5rem;
+  --text-9xl: 7rem;
 }
 
 @layer base {
@@ -33,6 +48,29 @@
   /* Optimized Typography Scale */
   .display-1 { @apply text-6xl md:text-8xl lg:text-9xl leading-[0.9] font-serif; }
   .display-2 { @apply text-5xl md:text-7xl lg:text-8xl leading-[0.9] font-serif; }
+
+  /* ─── STANDARD TYPOGRAPHY CLASSES ────────────────────── */
+  .display-hero {
+    @apply text-5xl md:text-7xl lg:text-8xl font-serif font-light leading-[1.0] tracking-tighter;
+  }
+  .display-section {
+    @apply font-serif text-3xl md:text-5xl lg:text-6xl font-normal leading-[1.15] tracking-tight;
+  }
+  .display-subsection {
+    @apply font-serif text-xl md:text-2xl lg:text-3xl font-normal leading-snug tracking-tight;
+  }
+  .tag-label {
+    @apply text-[0.65rem] md:text-[0.7rem] uppercase tracking-[0.3em] font-sans font-normal text-brand block mb-4 md:mb-6;
+  }
+  .body-lead {
+    @apply font-serif font-light text-grey-500 text-lg md:text-xl leading-relaxed italic;
+  }
+  .body-main {
+    @apply font-serif font-light text-grey-500 text-sm md:text-base lg:text-lg leading-relaxed;
+  }
+  .body-caps {
+    @apply text-[0.6rem] md:text-[0.65rem] uppercase tracking-[0.25em] text-grey-500 font-sans font-normal;
+  }
 }
 
 @layer components {
@@ -47,7 +85,7 @@
 
   /* ─── BUTTONS ────────────────────────────────────────── */
   .btn {
-    @apply text-[0.65rem] tracking-[0.3em] font-sans font-medium uppercase px-12 py-4 transition-all duration-500 inline-flex items-center justify-center border cursor-pointer rounded-full relative overflow-hidden active:scale-95;
+    @apply text-[0.65rem] tracking-[0.3em] font-sans font-normal uppercase px-12 py-4 transition-all duration-500 inline-flex items-center justify-center border cursor-pointer rounded-full relative overflow-hidden active:scale-95;
   }
   
   .btn-white { 

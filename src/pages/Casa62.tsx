@@ -46,7 +46,7 @@ export default function Casa62() {
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
             className="max-w-4xl space-y-12"
           >
-            <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-bold italic">Unidade 01: Nossa Primeira Unidade</div>
+            <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-normal italic">Unidade 01: Nossa Primeira Unidade</div>
             <h1 className="display-1 text-white leading-[0.8] mb-10 tracking-tighter">
               Casa 62. <br />
               <span className="italic text-brand font-light font-serif">História & Alma.</span>
@@ -55,7 +55,7 @@ export default function Casa62() {
               Onde a história da arquitetura encontra o movimento do mundo dos negócios atual. Uma casa histórica reformada para ajudar você a crescer.
             </p>
             <div className="flex flex-wrap gap-8 pt-6">
-              <button className="btn btn-brand h-16 px-16 text-lg" onClick={() => (window as any).openModal?.('Casa 62')}>Agendar Visita</button>
+              <button className="btn btn-brand" onClick={() => (window as any).openModal?.('Casa 62')}>Agendar Visita</button>
             </div>
           </motion.div>
         </div>
@@ -65,7 +65,7 @@ export default function Casa62() {
       <section id="sobre" className="py-32 md:py-64 px-6 md:px-16 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 xl:gap-32 items-center text-left">
           <div className="reveal space-y-12">
-            <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-bold italic font-bold">Uma Casa Histórica</div>
+            <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-normal italic">Uma Casa Histórica</div>
             <h2 className="font-serif text-4xl md:text-7xl text-grey-900 leading-[0.9] tracking-tighter">Um ícone da <br /><span className="italic text-brand font-light">nossa arquitetura.</span></h2>
             <div className="space-y-8 font-serif font-light text-grey-500 text-lg md:text-xl leading-relaxed italic leading-relaxed">
               <p>
@@ -77,11 +77,11 @@ export default function Casa62() {
             </div>
             <div className="grid grid-cols-2 gap-16 pt-12 border-t border-grey-100">
               <div className="space-y-4">
-                <p className="text-[0.6rem] uppercase tracking-[0.3em] text-grey-400 font-sans font-bold italic">Espaço para Pessoas</p>
+                <p className="text-[0.6rem] uppercase tracking-[0.3em] text-grey-400 font-sans font-normal italic">Espaço para Pessoas</p>
                 <p className="font-serif text-4xl text-grey-900">+200 Profissionais</p>
               </div>
               <div className="space-y-4">
-                <p className="text-[0.6rem] uppercase tracking-[0.3em] text-grey-400 font-sans font-bold italic">Tamanho Total</p>
+                <p className="text-[0.6rem] uppercase tracking-[0.3em] text-grey-400 font-sans font-normal italic">Tamanho Total</p>
                 <p className="font-serif text-4xl text-grey-900">1.500 m²</p>
               </div>
             </div>
@@ -105,7 +105,7 @@ export default function Casa62() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(74,107,63,0.05)_0%,transparent_70%)] pointer-events-none" />
         <div className="max-w-7xl mx-auto relative z-10 text-left">
           <div className="max-w-3xl mb-32 reveal">
-            <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] mb-8 font-bold font-sans italic">Tudo o que oferecemos</div>
+            <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] mb-8 font-normal font-sans italic">Tudo o que oferecemos</div>
             <h2 className="font-serif text-4xl md:text-7xl leading-[0.9] tracking-tighter">Tudo o que <br /><span className="italic text-brand font-light">sua empresa precisa.</span></h2>
           </div>
 
@@ -133,7 +133,7 @@ export default function Casa62() {
       {/* ─── GALERIA ─── */}
       <section className="py-32 md:py-64 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 md:px-16 mb-24 reveal text-left">
-          <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] mb-8 font-bold font-sans italic">Identidade Visual</div>
+          <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] mb-8 font-normal font-sans italic">Identidade Visual</div>
           <h2 className="font-serif text-4xl md:text-7xl text-black leading-[0.8] tracking-tighter">Galeria de <br /><span className="italic text-brand font-light font-serif">Espaços.</span></h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-6">
@@ -173,7 +173,7 @@ export default function Casa62() {
                   </div>
                   <div className="space-y-2 pt-2">
                     <h3 className="font-serif text-3xl tracking-tight leading-none text-white">Funcionamento</h3>
-                    <p className="text-white/40 font-serif font-light text-lg italic leading-relaxed">Segunda a Sexta: 08:30 às 18:30 <br /> <span className="text-brand font-bold not-italic font-sans text-sm tracking-widest uppercase mt-2 block">Acesso 24/7 para Residentes</span></p>
+                    <p className="text-white/40 font-serif font-light text-lg italic leading-relaxed">Segunda a Sexta: 08:30 às 18:30 <br /> <span className="text-brand font-normal not-italic font-sans text-sm tracking-widest uppercase mt-2 block">Acesso 24/7 para Residentes</span></p>
                   </div>
                </div>
                <div className="flex gap-8 items-start group">
@@ -188,14 +188,14 @@ export default function Casa62() {
              </div>
           </div>
           <div className="reveal order-1 lg:order-2 space-y-12">
-            <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-bold italic">Localização Estratégica</div>
+            <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-normal italic">Localização Estratégica</div>
             <h2 className="font-serif text-4xl md:text-7xl leading-[0.9] tracking-tighter">No coração do <br /><span className="italic text-brand font-light font-serif">Petrópolis.</span></h2>
             <p className="font-serif font-light text-white/40 text-lg md:text-2xl leading-relaxed lg:max-w-md italic">
               Uma localização privilegiada, cercada por facilidades e com fácil acesso aos principais lugares da cidade. O endereço ideal para sua marca.
             </p>
             <div className="pt-10">
               <button 
-                className="btn btn-brand h-18 px-14 text-lg shadow-xl shadow-brand/20 transition-all duration-500"
+                className="btn btn-brand shadow-xl shadow-brand/20 transition-all duration-500"
                 onClick={() => (window as any).openModal?.('Visita Casa 62')}
               >
                 Agendar Visita

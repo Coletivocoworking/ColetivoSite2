@@ -87,7 +87,7 @@ export default function PrivativoEmpresa() {
       <section className="py-32 md:py-64 px-6 md:px-16 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 xl:gap-32 items-center">
           <div className="reveal space-y-12 text-left">
-            <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-bold">Segurança e Qualidade</div>
+            <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-normal">Segurança e Qualidade</div>
             <h2 className="font-serif text-4xl md:text-7xl text-grey-900 leading-[0.9] tracking-tighter">
               A segurança de um <br />
               <span className="italic text-brand font-light uppercase text-3xl md:text-5xl tracking-[0.2em] block mt-4">escritório próprio.</span>
@@ -127,7 +127,7 @@ export default function PrivativoEmpresa() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(74,107,63,0.05)_0%,transparent_70%)] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-6 md:px-16 relative z-10 text-left">
           <div className="text-left mb-32 reveal">
-            <p className="text-brand text-[0.7rem] uppercase tracking-[0.5em] mb-8 font-bold font-sans">Apoio ao seu Negócio</p>
+            <p className="text-brand text-[0.7rem] uppercase tracking-[0.5em] mb-8 font-sans">Apoio ao seu Negócio</p>
             <h2 className="font-serif text-4xl md:text-7xl leading-[0.9] tracking-tighter text-white">Tudo o que sua <br /><span className="italic text-brand font-light">empresa precisa.</span></h2>
           </div>
 
@@ -175,7 +175,7 @@ export default function PrivativoEmpresa() {
           
           <div className="reveal order-1 lg:order-2 space-y-16 text-left">
             <div className="space-y-10">
-               <div className="text-brand text-[0.7rem] uppercase tracking-[0.4em] font-sans font-bold italic">Gestão Profissional</div>
+               <div className="text-brand text-[0.7rem] uppercase tracking-[0.4em] font-sans font-normal italic">Gestão Profissional</div>
               <h2 className="font-serif text-4xl md:text-7xl text-grey-900 leading-[0.9] tracking-tighter">Onde o profissionalismo <br /><span className="italic text-brand font-light uppercase text-3xl md:text-5xl tracking-[0.2em] block mt-4">encontra o conforto.</span></h2>
               <p className="font-serif font-light text-grey-500 text-lg md:text-xl leading-relaxed">
                 Nossos espaços foram pensados para o conforto do seu time. Planejamos tudo para que sua empresa possa crescer de 20 para 100 pessoas no mesmo lugar.
@@ -211,12 +211,12 @@ export default function PrivativoEmpresa() {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-8 pt-12">
             <button 
-              className="btn btn-brand h-16 px-12 text-lg"
+              className="btn btn-brand"
               onClick={() => (window as any).openModal?.('Visita Privativo Empresa')}
             >
               Falar com a Equipe
             </button>
-            <button className="btn btn-outline-brand h-16 px-12 text-lg">
+            <button className="btn btn-outline-brand">
               Conhecer os Espaços
             </button>
           </div>

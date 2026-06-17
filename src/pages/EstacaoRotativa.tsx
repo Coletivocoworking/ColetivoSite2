@@ -37,12 +37,12 @@ export default function EstacaoRotativa() {
   }, []);
 
   const features = [
-    { icon: <Wifi size={24} />, title: "Internet Ultra-Premium", desc: "Redundância total e velocidade simétrica para nunca parar." },
+    { icon: <Wifi size={24} />, title: "Internet Ultra-Rápida", desc: "Redundância total e velocidade simétrica para nunca parar." },
     { icon: <Coffee size={24} />, title: "Café de Especialidade", desc: "Grãos selecionados e torrados localmente, ilimitado para você." },
     { icon: <Smartphone size={24} />, title: "App Exclusivo", desc: "Reserve salas e conecte-se com a comunidade na palma da mão." },
     { icon: <Clock size={24} />, title: "Acesso Flexível", desc: "Trabalhe no seu ritmo, respeitando sua produtividade." },
     { icon: <Shield size={24} />, title: "Endereço Comercial", desc: "Dê prestígio ao seu negócio com localização privilegiada." },
-    { icon: <Sparkles size={24} />, title: "Serviço VIP", desc: "Nossa recepção cuida de tudo para você focar no que importa." }
+    { icon: <Sparkles size={24} />, title: "Atendimento Exclusivo", desc: "Nossa recepção cuida de tudo para você focar no que importa." }
   ];
 
   return (
@@ -80,9 +80,6 @@ export default function EstacaoRotativa() {
               >
                 Garantir meu Espaço
               </button>
-              <button className="btn btn-outline-white">
-                Ver Tour Virtual 360º
-              </button>
             </div>
           </motion.div>
         </div>
@@ -92,7 +89,7 @@ export default function EstacaoRotativa() {
       <section className="py-32 md:py-56 px-6 md:px-16 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 xl:gap-32 items-center">
           <div className="reveal space-y-12">
-            <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-bold">Networking e Troca</div>
+            <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-normal">Networking e Troca</div>
             <h2 className="font-serif text-4xl md:text-7xl text-grey-900 leading-[0.9] tracking-tighter">
               A mobilidade de um <br />
               <span className="italic text-brand font-light uppercase text-3xl md:text-5xl tracking-[0.2em] block mt-4">plano flexível.</span>
@@ -132,7 +129,7 @@ export default function EstacaoRotativa() {
               </p>
               <div className="mt-8 flex items-center gap-4">
                 <div className="w-8 h-px bg-grey-100" />
-                <span className="text-[0.6rem] uppercase tracking-[0.2em] font-sans font-bold text-grey-400 font-bold">Membro Rotativo</span>
+                <span className="text-[0.6rem] uppercase tracking-[0.2em] font-sans font-normal text-grey-400">Membro Rotativo</span>
               </div>
             </div>
           </div>
@@ -143,7 +140,7 @@ export default function EstacaoRotativa() {
       <section className="py-32 md:py-56 bg-grey-50 border-y border-grey-100">
         <div className="max-w-7xl mx-auto px-6 md:px-16">
           <div className="text-center max-w-3xl mx-auto mb-24 reveal">
-            <p className="text-brand text-[0.7rem] uppercase tracking-[0.5em] mb-8 font-sans font-bold">Standard of Excellence</p>
+            <p className="text-brand text-[0.7rem] uppercase tracking-[0.5em] mb-8 font-sans font-normal">Standard of Excellence</p>
             <h2 className="font-serif text-4xl md:text-7xl text-grey-900 leading-[0.9] tracking-tighter mb-10">Tudo o que <br /><span className="italic text-brand font-light">você precisa.</span></h2>
             <p className="font-serif font-light text-grey-500 text-lg leading-relaxed">O apoio que você precisa para que seu dia seja produtivo, todos os dias.</p>
           </div>
@@ -194,7 +191,7 @@ export default function EstacaoRotativa() {
           
           <div className="reveal order-1 lg:order-2 space-y-16">
             <div className="space-y-10">
-              <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-bold">Design Humano</div>
+              <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-normal">Design Humano</div>
               <h2 className="font-serif text-4xl md:text-7xl text-grey-900 leading-[0.9] tracking-tighter">Design que <br /><span className="italic text-brand font-light uppercase text-3xl md:text-5xl tracking-[0.2em] block mt-4">respira com você.</span></h2>
               <p className="font-serif font-light text-grey-500 text-lg md:text-xl leading-relaxed">
                 Nossas estações não são isoladas do mundo. Elas são integradas a jardins verticais, luz solar abundante e áreas de descompressão que elevam a satisfação orgânica.
@@ -203,7 +200,7 @@ export default function EstacaoRotativa() {
 
             <div className="space-y-12">
               {[
-                { icon: <Zap size={24} />, title: "Infraestrutura Premium", desc: "Mobiliário ergonômico e internet de alta velocidade para foco total." },
+                { icon: <Zap size={24} />, title: "Estrutura de Ponta", desc: "Mobiliário ergonômico e internet de alta velocidade para foco total." },
                 { icon: <Users size={24} />, title: "Conexão e Rede", desc: "Integração imediata com a maior comunidade de negócios de Petrópolis." },
                 { icon: <Leaf size={24} />, title: "Ambiente Natural", desc: "Espaços com luz solar abundante e vegetação para um dia mais produtivo." }
               ].map((item, i) => (
