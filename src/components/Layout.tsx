@@ -27,6 +27,7 @@ export default function Layout({ children }: LayoutProps) {
   const [isNavDarkMode, setIsNavDarkMode] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileSubOpen, setIsMobileSubOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
   const [selectedUnit, setSelectedUnit] = useState('');
@@ -330,51 +331,110 @@ export default function Layout({ children }: LayoutProps) {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            className="fixed inset-0 bg-black z-[1500] flex flex-col items-center justify-center gap-8"
+            className="fixed inset-0 bg-black z-[1500] flex flex-col overflow-y-auto w-full h-full px-6 py-24"
             initial={{ x: '100%' }}
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
           >
+            {/* Close button with high-contrast safety and comfortable touch area */}
             <button 
-              className="absolute top-10 right-10 text-white/50 hover:text-white transition-colors"
+              className="absolute top-6 right-6 p-3 rounded-full bg-white/5 text-white/70 hover:text-white transition-all cursor-pointer"
+              style={{ minWidth: '44px', minHeight: '44px' }}
               onClick={() => setIsMobileMenuOpen(false)}
+              aria-label="Fechar menu"
             >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
               </svg>
             </button>
-            {navLinks.map((item) => (
-              <div key={item.name} className="flex flex-col items-center gap-4">
-                <Link 
-                  to={item.path} 
-                  className="text-white text-3xl font-serif hover:text-brand transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-                {item.subItems && (
-                  <div className="flex flex-wrap justify-center gap-6">
-                    {item.subItems.map(sub => (
-                      <Link 
-                        key={sub.name}
-                        to={sub.path}
-                        className="text-white/40 text-xs uppercase tracking-widest hover:text-brand transition-colors font-sans"
-                        onClick={() => setIsMobileMenuOpen(false)}
+
+            <div className="flex flex-col items-center gap-10 my-auto py-6">
+              {navLinks.map((item) => (
+                <div key={item.name} className="flex flex-col items-center w-full max-w-sm">
+                  {item.subItems ? (
+                    <div className="flex flex-col items-center w-full">
+                      {/* Accordion trigger. Touching here opens subclass options easily */}
+                      <button 
+                        onClick={() => setIsMobileSubOpen(!isMobileSubOpen)}
+                        className="text-white text-3xl font-serif hover:text-brand transition-colors flex items-center justify-center gap-3 cursor-pointer py-2 focus:outline-none"
+                        style={{ minHeight: '48px' }}
                       >
-                        {sub.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
+                        {item.name}
+                        <motion.span
+                          animate={{ rotate: isMobileSubOpen ? 180 : 0 }}
+                          transition={{ duration: 0.3 }}
+                          className="inline-block text-white/50"
+                        >
+                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <polyline points="6 9 12 15 18 9" />
+                          </svg>
+                        </motion.span>
+                      </button>
+
+                      <AnimatePresence>
+                        {isMobileSubOpen && (
+                          <motion.div 
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.4, ease: "easeInOut" }}
+                            className="overflow-hidden flex flex-col items-center gap-4 bg-white/5 rounded-2xl p-4 w-full mt-3 border border-white/5 shadow-inner"
+                          >
+                            <Link
+                              to={item.path}
+                              className="text-brand text-xs uppercase tracking-[0.2em] font-sans font-medium py-2.5"
+                              style={{ minHeight: '44px' }}
+                              onClick={() => { setIsMobileMenuOpen(false); setIsMobileSubOpen(false); }}
+                            >
+                              Ver Todos os Espaços
+                            </Link>
+                            <div className="h-px bg-white/10 w-1/2" />
+                            {item.subItems.map(sub => (
+                              <Link 
+                                key={sub.name}
+                                to={sub.path}
+                                className="text-white/70 hover:text-brand text-xs uppercase tracking-widest transition-colors font-sans py-2.5 text-center active:scale-95"
+                                style={{ minHeight: '44px' }}
+                                onClick={() => { setIsMobileMenuOpen(false); setIsMobileSubOpen(false); }}
+                              >
+                                {sub.name}
+                              </Link>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  ) : (
+                    <Link 
+                      to={item.path} 
+                      className="text-white text-3xl font-serif hover:text-brand transition-colors py-2 block text-center"
+                      style={{ minHeight: '48px' }}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            {/* Bottom Contact / High contrast buttons & socials */}
+            <div className="mt-auto pt-8 flex flex-col items-center gap-6 w-full max-w-sm mx-auto">
+              <button 
+                className="btn btn-white w-full py-3.5"
+                style={{ minHeight: '48px' }}
+                onClick={() => { setIsMobileMenuOpen(false); openModal(); }}
+              >
+                Fale com a gente
+              </button>
+              
+              <div className="flex gap-6 justify-center">
+                <a href="https://www.youtube.com/@ColetivoWorkspace" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-brand p-2" title="YouTube"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
+                <a href="https://www.instagram.com/coletivocoworking/" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-brand p-2" title="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+                <a href="https://www.linkedin.com/company/coletivocoworking/" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-brand p-2" title="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
               </div>
-            ))}
-            <button 
-              className="btn btn-white mt-4"
-              onClick={() => { setIsMobileMenuOpen(false); openModal(); }}
-            >
-              Fale com a gente
-            </button>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

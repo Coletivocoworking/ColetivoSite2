@@ -85,7 +85,7 @@
 
   /* ─── BUTTONS ────────────────────────────────────────── */
   .btn {
-    @apply text-[0.65rem] tracking-[0.3em] font-sans font-normal uppercase px-12 py-4 transition-all duration-500 inline-flex items-center justify-center border cursor-pointer rounded-full relative overflow-hidden active:scale-95;
+    @apply text-[0.65rem] tracking-[0.3em] font-sans font-normal uppercase px-8 md:px-12 py-3.5 md:py-4 transition-all duration-500 inline-flex items-center justify-center border cursor-pointer rounded-full relative overflow-hidden active:scale-95;
   }
   
   .btn-white { 

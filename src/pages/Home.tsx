@@ -32,7 +32,7 @@ export default function Home() {
   return (
     <>
       {/* ──────────────────────── HOME ──────────────────────── */}
-      <section id="home" className="relative min-h-[110vh] flex items-center px-6 md:px-16 pt-40 pb-40 overflow-hidden bg-black">
+      <section id="home" className="relative min-h-screen md:min-h-[110vh] flex items-center px-6 md:px-16 pt-32 pb-24 md:py-40 overflow-hidden bg-black">
         <div className="absolute inset-0 z-0 opacity-70">
           <video className="w-full h-full object-cover scale-110" autoPlay loop muted playsInline>
             <source src="http://coletivo.cc/wp-content/uploads/2026/04/Video-Coletivo.mp4" type="video/mp4" />
@@ -48,7 +48,7 @@ export default function Home() {
           </h1>
           
           <motion.div 
-            className="flex flex-wrap items-center gap-12 pt-4"
+            className="flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-12 pt-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.9, duration: 0.8 }}
@@ -56,9 +56,9 @@ export default function Home() {
             <p className="body-lead text-white/60 max-w-lg">
               Mais que um escritório, um ecossistema de pessoas, conexões e evolução. Um lugar que eleva sua rotina, seu foco e sua forma de trabalhar.
             </p>
-            <div className="flex gap-8">
-              <button className="btn btn-brand" onClick={() => (window as any).openModal?.()}>Agendar Visita</button>
-              <Link to="/sobre" className="btn btn-outline-white">O Manifesto</Link>
+            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+              <button className="btn btn-brand w-full sm:w-auto text-center" onClick={() => (window as any).openModal?.()}>Agendar Visita</button>
+              <Link to="/sobre" className="btn btn-outline-white w-full sm:w-auto text-center">O Manifesto</Link>
             </div>
           </motion.div>
         </div>
