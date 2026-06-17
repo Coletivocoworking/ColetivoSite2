@@ -420,9 +420,19 @@ export default function Layout({ children }: LayoutProps) {
             </div>
 
             {/* Bottom Contact / High contrast buttons & socials */}
-            <div className="mt-auto pt-8 flex flex-col items-center gap-6 w-full max-w-sm mx-auto">
+            <div className="mt-auto pt-8 flex flex-col items-center gap-4 w-full max-w-sm mx-auto">
+              <a 
+                href="https://coletivo.conexa.app/index.php?r=site/login"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-brand w-full py-3.5 text-center"
+                style={{ minHeight: '48px' }}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Área do Cliente
+              </a>
               <button 
-                className="btn btn-white w-full py-3.5"
+                className="btn btn-outline-white w-full py-3.5"
                 style={{ minHeight: '48px' }}
                 onClick={() => { setIsMobileMenuOpen(false); openModal(); }}
               >
@@ -506,12 +516,14 @@ export default function Layout({ children }: LayoutProps) {
               </li>
             ))}
             <li>
-              <button 
+              <a 
+                href="https://coletivo.conexa.app/index.php?r=site/login"
+                target="_blank"
+                rel="noopener noreferrer"
                 className={`btn ${isNavDarkMode ? 'btn-white' : 'btn-brand'} py-2.5 px-8`}
-                onClick={() => openModal()}
               >
-                Agendar Visita
-              </button>
+                Área do Cliente
+              </a>
             </li>
           </ul>
 
