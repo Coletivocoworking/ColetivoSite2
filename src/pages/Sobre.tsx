@@ -294,7 +294,7 @@ export default function Sobre() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-12 md:gap-x-8 md:gap-y-16 max-w-5xl mx-auto justify-center">
             {[
               { name: 'Jade', role: 'Recepção Casa 62', img: 'https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/04/13.png' },
-              { name: 'Thaty', role: 'Recepção Area 51', img: 'https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/04/15.png' },
+              { name: 'Thaty', role: 'Recepção Area 51', img: 'https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-18-at-17.31.04.jpeg' },
               { name: 'Brenda', role: 'Gerente de Comunidade', img: 'https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/04/14.png' },
               { name: 'Luana', role: 'Gerente Operacional', img: 'https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/04/12.png' }
             ].map((member, i) => (
