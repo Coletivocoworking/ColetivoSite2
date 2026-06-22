@@ -60,10 +60,10 @@ export default function Comunidade() {
 
   const testimonials = [
     {
-      quote: "No Coletivo, sinto que meu dia rende mais porque o ambiente respeita meu ritmo. As pausas no pátio são fundamentais para o meu equilíbrio.",
-      name: "Clara Mendes",
-      role: "Designer e Fundadora",
-      img: "https://i.pravatar.cc/150?u=clara"
+      quote: "O Coletivo transformou a nossa produtividade e forma de trabalhar. Conciliar a privacidade e o silêncio com o networking dinâmico do coworking e o bem-estar do pátio faz o dia render com uma leveza incrível.",
+      name: "Juliano Unti",
+      role: "Founder da GuessLess",
+      img: "https://i.pravatar.cc/150?u=juliano"
     },
     {
       quote: "O silêncio e as plantas me ajudam a manter a calma mesmo nos dias mais corridos. É um escritório que realmente cuida da gente.",

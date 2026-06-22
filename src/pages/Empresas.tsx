@@ -38,31 +38,31 @@ export default function Empresas() {
       <section id="empresas-hero" className="relative min-h-[80vh] flex items-center justify-center px-6 pt-32 pb-24 bg-grey-900 overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2024/09/DSC01993-scaled.jpg" 
-            className="w-full h-full object-cover opacity-25 scale-105 filter grayscale"
-            alt="Ambiente Acolhedor do Coletivo"
+            src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2023/03/IMG_0571_edit-scaled.jpg" 
+            className="w-full h-full object-cover opacity-40 scale-105"
+            alt="Ambiente de Coworking do Coletivo"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-grey-900/80 via-grey-900/40 to-grey-900" />
+          <div className="absolute inset-0 bg-gradient-to-b from-grey-900/80 via-grey-900/50 to-grey-900" />
         </div>
         
-        <div className="relative z-10 max-w-4xl mx-auto text-center space-y-8">
+        <div className="relative z-10 max-w-5xl mx-auto text-center space-y-8">
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 1 }}
             className="font-serif text-5xl md:text-7xl lg:text-8xl text-white leading-tight tracking-tighter"
           >
-            Sua empresa no espaço que<br />
-            <span className="italic text-brand font-light font-serif">inspira e acolhe de verdade.</span>
+            Sua empresa conectada ao<br />
+            <span className="italic text-brand font-light font-serif">ecossistema de coworking mais vibrante de POA.</span>
           </motion.h1>
 
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 1 }}
-            className="text-white/80 text-lg md:text-xl font-serif font-light max-w-2xl mx-auto leading-relaxed italic"
+            className="text-white/80 text-lg md:text-xl font-serif font-light max-w-3xl mx-auto leading-relaxed italic"
           >
-            Esqueça a chatice de escritórios cinzas e cheios de burocracia. Na Lucas de Oliveira, criamos um espaço gostoso com luz do sol, plantas e café quente para o seu dia render com leveza e sem nenhuma pressa ou preocupação.
+            Esqueça a burocracia e as distrações de um escritório tradicional. No Coletivo, sua equipe tem acesso a uma estrutura premium e inteligente de coworking, cercada de muito verde, café sempre quente e conexões de alto valor para focar no que realmente importa.
           </motion.p>
         </div>
       </section>
