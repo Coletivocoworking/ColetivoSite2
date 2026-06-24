@@ -187,7 +187,7 @@ export default function Layout({ children }: LayoutProps) {
             transition={{ duration: 0.8, ease: "easeInOut" }}
           >
             <motion.img
-              src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2023/03/Frame-2.png"
+              src="/images/logo/coletivo-coworking-logo.png"
               alt="Coletivo"
               className="loader-logo"
               initial={{ scale: 0.8, opacity: 0 }}
@@ -494,7 +494,7 @@ export default function Layout({ children }: LayoutProps) {
         <div className="flex-none flex justify-center">
           <Link to="/" className="w-24 md:w-28 transition-transform hover:scale-105 duration-700">
             <img 
-              src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2023/03/Frame-2.png" 
+              src="/images/logo/coletivo-coworking-logo.png" 
               alt="Coletivo" 
               className="w-full h-auto transition-all duration-700"
               style={{ filter: isNavDarkMode ? 'brightness(0) invert(1)' : 'brightness(0)' }}
@@ -547,7 +547,7 @@ export default function Layout({ children }: LayoutProps) {
       <footer className="bg-black text-white py-32 md:py-48 px-6 md:px-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
           <div className="space-y-8">
-            <img src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2023/03/Frame-2.png" alt="Coletivo" className="w-32 invert brightness-0" />
+            <img src="/images/logo/coletivo-coworking-logo.png" alt="Coletivo" className="w-32 invert brightness-0" />
             <p className="text-white/40 text-sm leading-relaxed max-w-xs">
               O melhor lugar para trabalhar em Porto Alegre, com espaços incríveis e uma comunidade unida.
             </p>

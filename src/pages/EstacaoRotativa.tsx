@@ -51,7 +51,7 @@ export default function EstacaoRotativa() {
       <section className="relative min-h-screen flex items-center pt-32 pb-20 px-6 md:px-16 overflow-hidden bg-grey-900">
         <div className="absolute inset-0 z-0 h-full w-full overflow-hidden">
           <img 
-            src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/1.jpg" 
+            src="/images/hero/coletivo-coworking-sala-privativa-hero.jpg" 
             alt="Estação Rotativa Coletivo" 
             className="w-full h-full object-cover opacity-20 scale-105"
           />
@@ -115,7 +115,7 @@ export default function EstacaoRotativa() {
           <div className="reveal relative">
             <div className="aspect-square rounded-[4rem] overflow-hidden shadow-2xl relative border-[12px] border-grey-50">
               <img 
-                src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2023/03/IMG_0571_edit-scaled.jpg" 
+                src="/images/hero/coletivo-coworking-porto-alegre-hero.jpg" 
                 alt="Detalhe Estação Rotativa" 
                 className="w-full h-full object-cover transition-all duration-[2s] ease-out scale-105"
               />
@@ -172,15 +172,15 @@ export default function EstacaoRotativa() {
             <div className="grid grid-cols-2 gap-8 items-end group">
               <div className="space-y-8">
                 <div className="rounded-[2.5rem] overflow-hidden transition-all duration-1000 shadow-xl scale-95 hover:scale-100">
-                  <img src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/3.jpg" className="w-full h-full object-cover" alt="Bem-estar 1" />
+                  <img src="/images/galeria/coletivo-coworking-espaco-interno-02.jpg" className="w-full h-full object-cover" alt="Bem-estar 1" />
                 </div>
                 <div className="rounded-[2.5rem] overflow-hidden transition-all duration-1000 shadow-xl scale-90 hover:scale-95 translate-x-4">
-                  <img src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/4.jpg" className="w-full h-full object-cover" alt="Bem-estar 2" />
+                  <img src="/images/galeria/coletivo-coworking-espaco-interno-03.jpg" className="w-full h-full object-cover" alt="Bem-estar 2" />
                 </div>
               </div>
               <div className="space-y-8 pb-32">
                 <div className="rounded-[2.5rem] overflow-hidden transition-all duration-1000 shadow-xl scale-100 hover:scale-105">
-                  <img src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/5.jpg" className="w-full h-full object-cover" alt="Bem-estar 3" />
+                  <img src="/images/galeria/coletivo-coworking-espaco-interno-04.jpg" className="w-full h-full object-cover" alt="Bem-estar 3" />
                 </div>
               </div>
             </div>

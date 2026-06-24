@@ -20,10 +20,10 @@ export default function Area51() {
   }, []);
 
   const galleries = [
-    "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/03/Design-sem-nome-4.jpg",
-    "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200",
-    "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=1200",
-    "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=1200"
+    "/images/hero/coletivo-coworking-area51-hero.jpg",
+    "/images/stock/coletivo-escritorio-moderno-01.jpg",
+    "/images/stock/coletivo-escritorio-moderno-02.jpg",
+    "/images/stock/coletivo-escritorio-colaborativo.jpg"
   ];
 
   return (
@@ -32,7 +32,7 @@ export default function Area51() {
       <section className="relative min-h-screen flex items-center pt-32 pb-20 px-6 md:px-16 overflow-hidden bg-grey-900 text-white">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/03/Design-sem-nome-4.jpg" 
+            src="/images/hero/coletivo-coworking-area51-hero.jpg" 
             alt="Area 51" 
             className="w-full h-full object-cover opacity-40 scale-105"
           />
@@ -90,7 +90,7 @@ export default function Area51() {
             <div className="absolute -inset-8 bg-brand/5 rounded-[4rem] -rotate-3 group-hover:rotate-0 transition-all duration-[2s] ease-out" />
             <div className="relative rounded-[3.5rem] overflow-hidden shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800" 
+                src="/images/stock/coletivo-escritorio-moderno-01.jpg" 
                 alt="Area 51 Interior" 
                 className="w-full aspect-[4/5] object-cover transition-all duration-[2s] group-hover:scale-[1.05]"
               />

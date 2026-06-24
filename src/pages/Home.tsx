@@ -35,7 +35,7 @@ export default function Home() {
       <section id="home" className="relative min-h-screen md:min-h-[110vh] flex items-center px-6 md:px-16 pt-32 pb-24 md:py-40 overflow-hidden bg-black">
         <div className="absolute inset-0 z-0 opacity-70">
           <video className="w-full h-full object-cover scale-110" autoPlay loop muted playsInline>
-            <source src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/04/Video-Coletivo.mp4" type="video/mp4" />
+            <source src="/videos/coletivo-coworking-porto-alegre.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/40" />
         </div>
@@ -69,7 +69,7 @@ export default function Home() {
         <div className="reveal relative group">
           <div className="absolute -inset-4 bg-brand/5 rounded-2xl scale-95 group-hover:scale-100 transition-transform duration-700" />
           <img 
-            src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/03/Design-sem-nome-4.jpg" 
+            src="/images/hero/coletivo-coworking-area51-hero.jpg" 
             alt="Ambiente Coletivo Coworking" 
             className="relative rounded-xl shadow-2xl w-full h-auto object-cover aspect-[4/5]"
             loading="lazy" 
@@ -130,18 +130,18 @@ export default function Home() {
 
           <div className="reveal grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 opacity-90">
             {[
-              'https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/05/Frame-167.png',
-              'https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/05/Reina-logo.png',
-              'https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/04/10.png',
-              'https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/04/9.png',
-              'https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/04/8.png',
-              'https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/04/7.png',
-              'https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/04/6.png',
-              'https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/04/5.png',
-              'https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/04/4.png',
-              'https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/04/3.png',
-              'https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/04/2.png',
-              'https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/04/1.png'
+              '/images/logo/coletivo-coworking-logo-alternativo.png',
+              '/images/logo/coletivo-coworking-parceiro-reina.png',
+              '/images/parceiros/coletivo-coworking-parceiro-10.png',
+              '/images/parceiros/coletivo-coworking-parceiro-09.png',
+              '/images/parceiros/coletivo-coworking-parceiro-08.png',
+              '/images/parceiros/coletivo-coworking-parceiro-07.png',
+              '/images/parceiros/coletivo-coworking-parceiro-06.png',
+              '/images/parceiros/coletivo-coworking-parceiro-05.png',
+              '/images/parceiros/coletivo-coworking-parceiro-04.png',
+              '/images/parceiros/coletivo-coworking-parceiro-03.png',
+              '/images/parceiros/coletivo-coworking-parceiro-02.png',
+              '/images/parceiros/coletivo-coworking-parceiro-01.png'
             ].map((logo, i) => (
               <div 
                 key={i} 
@@ -174,18 +174,18 @@ export default function Home() {
           <div className="reveal grid grid-cols-2 gap-4" style={{ transitionDelay: '.2s' }}>
             <div className="space-y-4">
               <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-lg">
-                <img src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/05/Natureza.png" alt="Natureza" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+                <img src="/images/amenidades/coletivo-coworking-amenidade-natureza.png" alt="Natureza" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
               </div>
               <div className="aspect-square rounded-3xl overflow-hidden shadow-lg">
-                <img src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/05/Cafe.png" alt="Café" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+                <img src="/images/amenidades/coletivo-coworking-amenidade-cafe.png" alt="Café" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
               </div>
             </div>
             <div className="space-y-4 pt-12">
               <div className="aspect-square rounded-3xl overflow-hidden shadow-lg">
-                <img src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/05/Canto-Foco.png" alt="Canto e Foco" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+                <img src="/images/amenidades/coletivo-coworking-amenidade-canto-foco.png" alt="Canto e Foco" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
               </div>
               <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-lg">
-                <img src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/05/Yoga.png" alt="Yoga" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+                <img src="/images/amenidades/coletivo-coworking-amenidade-yoga.png" alt="Yoga" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
               </div>
             </div>
           </div>
@@ -237,7 +237,7 @@ export default function Home() {
         <div 
           className="split-panel group select-none" 
         >
-          <img src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/6.jpg" alt="Casa 62" className="split-bg" loading="lazy" />
+          <img src="/images/hero/coletivo-coworking-espacos-hero.jpg" alt="Casa 62" className="split-bg" loading="lazy" />
           <div className="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-colors duration-1000" />
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-12 translate-y-4 group-hover:translate-y-0 transition-transform duration-1000">
             <div className="text-white/30 text-[0.7rem] tracking-[0.6em] mb-4 font-sans font-normal">01</div>
@@ -248,7 +248,7 @@ export default function Home() {
         <div 
           className="split-panel group border-t md:border-t-0 md:border-l border-white/5 select-none" 
         >
-          <img src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/03/Design-sem-nome-4.jpg" alt="Area 51" className="split-bg" loading="lazy" />
+          <img src="/images/hero/coletivo-coworking-area51-hero.jpg" alt="Area 51" className="split-bg" loading="lazy" />
           <div className="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-colors duration-1000" />
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-12 translate-y-4 group-hover:translate-y-0 transition-transform duration-1000">
             <div className="text-white/30 text-[0.7rem] tracking-[0.6em] mb-4 font-sans font-normal">02</div>
@@ -328,7 +328,7 @@ export default function Home() {
             <div className="reveal relative group" style={{ transitionDelay: '.2s' }}>
               <div className="aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl border-[12px] border-grey-50">
                 <img 
-                  src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/PROPOSTA-EVENTOS.png" 
+                  src="/images/eventos/coletivo-coworking-eventos-proposta.png" 
                   alt="Espaço para Eventos Coletivo" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2s] ease-out" 
                 />
@@ -383,7 +383,7 @@ export default function Home() {
           <div className="relative reveal" style={{ transitionDelay: '.2s' }}>
             <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl relative group">
               <img 
-                src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/04/nicolasvvaz_672419504_18576988249011815_7243819519612182986_n.jpg" 
+                src="/images/galeria/coletivo-coworking-podcast.jpg" 
                 alt="Podcast Coletivo" 
                 className="w-full h-full object-cover transition-all duration-1000"
               />

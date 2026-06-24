@@ -46,7 +46,7 @@ export default function PrivativoEmpresa() {
       <section className="relative min-h-screen flex items-center pt-32 pb-20 px-6 md:px-16 overflow-hidden bg-grey-900">
         <div className="absolute inset-0 z-0 h-full w-full overflow-hidden">
           <img 
-            src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/03/Design-sem-nome-4.jpg" 
+            src="/images/hero/coletivo-coworking-area51-hero.jpg" 
             alt="Escritórios Privativos Empresa" 
             className="w-full h-full object-cover opacity-20 scale-105"
           />
@@ -109,7 +109,7 @@ export default function PrivativoEmpresa() {
           <div className="reveal relative">
             <div className="aspect-[4/5] rounded-[4rem] overflow-hidden shadow-2xl relative border-[12px] border-grey-50 group">
               <img 
-                src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/6.jpg" 
+                src="/images/hero/coletivo-coworking-espacos-hero.jpg" 
                 alt="Corporate Environment" 
                 className="w-full h-full object-cover transition-all duration-[2s] ease-out group-hover:scale-105"
               />
@@ -157,7 +157,7 @@ export default function PrivativoEmpresa() {
           <div className="reveal order-2 lg:order-1 relative">
             <div className="grid grid-cols-2 gap-12">
               <div className="space-y-12 mt-16">
-                <img src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/2.jpg" className="rounded-3xl shadow-xl" alt="Private Office Detail" />
+                <img src="/images/galeria/coletivo-coworking-espaco-interno-01.jpg" className="rounded-3xl shadow-xl" alt="Private Office Detail" />
                 <div className="p-10 bg-brand text-white rounded-[2.5rem] shadow-2xl">
                   <Lock size={36} className="mb-6 opacity-50" />
                   <h4 className="font-serif text-2xl mb-4 tracking-tight">Rede Segura</h4>
@@ -166,9 +166,9 @@ export default function PrivativoEmpresa() {
               </div>
               <div className="space-y-12">
                 <div className="aspect-[3/4] rounded-[3rem] overflow-hidden shadow-xl border-8 border-grey-50">
-                  <img src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/4.jpg" className="w-full h-full object-cover" alt="Corporate Service" />
+                  <img src="/images/galeria/coletivo-coworking-espaco-interno-03.jpg" className="w-full h-full object-cover" alt="Corporate Service" />
                 </div>
-                <img src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/5.jpg" className="rounded-3xl shadow-xl" alt="Board Room" />
+                <img src="/images/galeria/coletivo-coworking-espaco-interno-04.jpg" className="rounded-3xl shadow-xl" alt="Board Room" />
               </div>
             </div>
           </div>

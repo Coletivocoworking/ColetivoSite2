@@ -157,7 +157,7 @@ export default function Sobre() {
       <section id="sobre-hero" className="relative min-h-[90vh] flex items-center justify-center px-6 pt-32 pb-20 bg-grey-900 overflow-hidden">
         <div className="absolute inset-0 opacity-40">
           <img 
-            src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/03/Design-sem-nome-4.jpg" 
+            src="/images/hero/coletivo-coworking-area51-hero.jpg" 
             alt="Somos Coletivo Background" 
             className="w-full h-full object-cover scale-110"
           />
@@ -241,7 +241,7 @@ export default function Sobre() {
                 <div className="absolute -inset-4 bg-brand/10 rounded-[2.5rem] rotate-2 group-hover:rotate-0 transition-transform duration-700" />
                 <div className="relative aspect-video rounded-[2rem] overflow-hidden shadow-2xl">
                   <img 
-                    src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/03/Design-sem-nome-4.jpg" 
+                    src="/images/hero/coletivo-coworking-area51-hero.jpg" 
                     alt="Alma Coletivo" 
                     className="w-full h-full object-cover transition-all duration-1000"
                   />
@@ -273,7 +273,7 @@ export default function Sobre() {
             <div className="absolute -inset-10 bg-brand/5 rounded-[4rem] -rotate-3 group-hover:rotate-0 transition-all duration-[2.5s] ease-out" />
             <div className="aspect-[4/5] overflow-hidden rounded-[3.5rem] shadow-2xl relative">
               <img 
-                src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/6.jpg" 
+                src="/images/hero/coletivo-coworking-espacos-hero.jpg" 
                 alt="História Coletivo" 
                 className="w-full h-full object-cover transition-all duration-[2s] group-hover:scale-110"
               />
@@ -293,10 +293,10 @@ export default function Sobre() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-12 md:gap-x-8 md:gap-y-16 max-w-5xl mx-auto justify-center">
             {[
-              { name: 'Jade', role: 'Recepção Casa 62', img: 'https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/04/13.png' },
-              { name: 'Thaty', role: 'Recepção Area 51', img: 'https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-18-at-17.31.04.jpeg' },
-              { name: 'Brenda', role: 'Gerente de Comunidade', img: 'https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/04/14.png' },
-              { name: 'Luana', role: 'Gerente Operacional', img: 'https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/04/12.png' }
+              { name: 'Jade', role: 'Recepção Casa 62', img: '/images/equipe/coletivo-coworking-equipe-jade.png' },
+              { name: 'Thaty', role: 'Recepção Area 51', img: '/images/equipe/coletivo-coworking-equipe-thaty.jpg' },
+              { name: 'Brenda', role: 'Gerente de Comunidade', img: '/images/equipe/coletivo-coworking-equipe-brenda.png' },
+              { name: 'Luana', role: 'Gerente Operacional', img: '/images/equipe/coletivo-coworking-equipe-luana.png' }
             ].map((member, i) => (
               <div key={i} className="reveal group" style={{ transitionDelay: `${i * 0.05}s` }}>
                 <div className="aspect-[3/4] overflow-hidden rounded-[1.5rem] mb-6 transition-all duration-700 shadow-xl shadow-black/5">
@@ -330,16 +330,16 @@ export default function Sobre() {
 
           <ImageSlider 
             images={[
-              "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2023/04/IMG_0879_edit-scaled.jpg",
-              "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2023/04/IMG_0980_edit-v02.jpg",
-              "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2023/03/IMG_0691_edit-scaled.jpg",
-              "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2023/03/IMG_0571_edit-scaled.jpg",
-              "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2023/03/IMG_0610_edit-scaled.jpg",
-              "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2023/04/IMG_0909_edit.jpg",
-              "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2023/03/IMG_0630_edit-1-scaled.jpg",
-              "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/4.jpg",
-              "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2023/04/IMG_0732_edit.jpg",
-              "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2022/12/coletivo62-petropolis-corredor.jpg"
+              "/images/galeria/coletivo-casa62-espaco-interno-01.jpg",
+              "/images/galeria/coletivo-casa62-espaco-interno-02.jpg",
+              "/images/galeria/coletivo-casa62-espaco-interno-03.jpg",
+              "/images/hero/coletivo-coworking-porto-alegre-hero.jpg",
+              "/images/galeria/coletivo-casa62-espaco-interno-04.jpg",
+              "/images/galeria/coletivo-casa62-espaco-interno-05.jpg",
+              "/images/galeria/coletivo-casa62-espaco-interno-06.jpg",
+              "/images/galeria/coletivo-coworking-espaco-interno-03.jpg",
+              "/images/galeria/coletivo-casa62-espaco-interno-07.jpg",
+              "/images/galeria/coletivo-casa62-corredor-historico.jpg"
             ]} 
             onImageClick={setSelectedImg} 
           />
@@ -399,14 +399,14 @@ export default function Sobre() {
           
           <ImageSlider 
             images={[
-              "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2022/12/Coletivo-area-51-frente.jpg",
-              "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/1.jpg",
-              "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/3.jpg",
-              "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2023/04/IMG_0873-1.jpeg",
-              "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/03/Design-sem-nome-5.jpg",
-              "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/03/Design-sem-nome-4.jpg",
-              "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2023/04/IMG_0879.jpeg",
-              "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2023/04/IMG_6134-1.jpeg"
+              "/images/galeria/coletivo-area51-fachada.jpg",
+              "/images/hero/coletivo-coworking-sala-privativa-hero.jpg",
+              "/images/galeria/coletivo-coworking-espaco-interno-02.jpg",
+              "/images/galeria/coletivo-casa62-espaco-interno-08.jpg",
+              "/images/hero/coletivo-coworking-area51-alternativo-hero.jpg",
+              "/images/hero/coletivo-coworking-area51-hero.jpg",
+              "/images/galeria/coletivo-casa62-espaco-interno-09.jpg",
+              "/images/galeria/coletivo-casa62-espaco-interno-10.jpg"
             ]} 
             onImageClick={setSelectedImg} 
           />

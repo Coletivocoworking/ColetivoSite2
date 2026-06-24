@@ -45,19 +45,19 @@ export default function SalaReuniao() {
       title: "Sala de Decisões", 
       capacity: "Até 14 pessoas", 
       desc: "Perfeita para reuniões importantes e apresentações para investidores. Mesa grande e confortável.",
-      img: "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/6.jpg"
+      img: "/images/hero/coletivo-coworking-espacos-hero.jpg"
     },
     { 
       title: "Sala para Conversas", 
       capacity: "2 a 4 pessoas", 
       desc: "Lugar reservado para entrevistas ou reuniões rápidas com poucas pessoas.",
-      img: "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/2.jpg"
+      img: "/images/galeria/coletivo-coworking-espaco-interno-01.jpg"
     },
     { 
       title: "Sala de Criação", 
       capacity: "Até 8 pessoas", 
       desc: "Sala com paredes para escrever e móveis que você pode mudar de lugar como quiser.",
-      img: "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/4.jpg"
+      img: "/images/galeria/coletivo-coworking-espaco-interno-03.jpg"
     }
   ];
 
@@ -67,7 +67,7 @@ export default function SalaReuniao() {
       <section className="relative min-h-screen flex items-center pt-32 pb-20 px-6 md:px-16 overflow-hidden bg-grey-900">
         <div className="absolute inset-0 z-0 h-full w-full overflow-hidden">
           <img 
-            src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/6.jpg" 
+            src="/images/hero/coletivo-coworking-espacos-hero.jpg" 
             alt="Salas de Reunião Coletivo" 
             className="w-full h-full object-cover opacity-20 scale-105"
           />
@@ -130,7 +130,7 @@ export default function SalaReuniao() {
           <div className="reveal relative">
             <div className="aspect-square rounded-[4rem] overflow-hidden shadow-2xl relative border-[12px] border-grey-50 group">
               <img 
-                src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/6.jpg" 
+                src="/images/hero/coletivo-coworking-espacos-hero.jpg" 
                 alt="Sala de Reunião Board" 
                 className="w-full h-full object-cover transition-all duration-[2s] ease-out group-hover:scale-105"
               />
@@ -211,7 +211,7 @@ export default function SalaReuniao() {
             <div className="reveal relative aspect-square">
               <div className="absolute inset-0 bg-brand/5 rounded-full animate-pulse blur-3xl opacity-50" />
               <div className="relative z-10 w-full h-full bg-white/5 backdrop-blur-3xl rounded-[4rem] border border-white/10 p-20 flex items-center justify-center group overflow-hidden hover:border-brand/30 transition-all duration-1000">
-                <div className="absolute inset-0 opacity-10 group-hover:opacity-30 transition-opacity duration-1000 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
+                <div className="absolute inset-0 opacity-10 group-hover:opacity-30 transition-opacity duration-1000 bg-[url('/images/ui/coletivo-textura-sala-reuniao.png')]" />
                 <div className="relative z-10 bg-grey-900 p-10 rounded-full border border-white/10 shadow-2xl group-hover:scale-110 transition-transform duration-[1.5s] ease-out">
                   <Zap className="text-brand animate-pulse" size={120} strokeWidth={1} />
                 </div>
