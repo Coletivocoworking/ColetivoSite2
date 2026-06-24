@@ -33,19 +33,19 @@ export default function Eventos() {
     { 
       title: "Workshops & Treinamentos", 
       desc: "Salas que podem ser mudadas de acordo com o que você precisa para ensinar e aprender de forma prática.",
-      img: "/images/galeria/coletivo-coworking-espaco-interno-03.jpg",
+      img: "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/4.jpg",
       capacity: "Até 40 pessoas"
     },
     { 
       title: "Talks & Lançamentos", 
       desc: "Palco, iluminação especial e som de alta qualidade para transformar sua apresentação em um momento inesquecível.",
-      img: "/images/hero/coletivo-coworking-espacos-hero.jpg",
+      img: "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/6.jpg",
       capacity: "Até 60 pessoas"
     },
     { 
       title: "Networking & Comemorações", 
       desc: "Espaços leves e perto da natureza, ideais para festas e para conhecer novas pessoas sem pressa.",
-      img: "/images/hero/coletivo-coworking-sala-privativa-hero.jpg",
+      img: "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/1.jpg",
       capacity: "Até 100 pessoas"
     }
   ];
@@ -63,7 +63,7 @@ export default function Eventos() {
       <section className="relative min-h-screen flex items-center pt-32 pb-20 px-6 md:px-16 overflow-hidden bg-grey-900">
         <div className="absolute inset-0 z-0 h-full w-full overflow-hidden">
           <img 
-            src="/images/hero/coletivo-coworking-espacos-hero.jpg" 
+            src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/6.jpg" 
             alt="Eventos Coletivo" 
             className="w-full h-full object-cover opacity-20 scale-105"
           />
@@ -130,7 +130,7 @@ export default function Eventos() {
             <div className="reveal relative">
               <div className="aspect-[4/5] rounded-[4rem] overflow-hidden shadow-2xl relative border-[12px] border-grey-50 group">
                 <img 
-                  src="/images/galeria/coletivo-coworking-espaco-interno-01.jpg" 
+                  src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/2.jpg" 
                   alt="Event Experience" 
                   className="w-full h-full object-cover transition-all duration-[2s] ease-out group-hover:scale-105"
                 />

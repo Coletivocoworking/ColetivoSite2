@@ -41,7 +41,7 @@ export default function Espacos() {
       <section id="espacos-hero" className="relative min-h-screen flex items-center pt-32 pb-20 px-6 md:px-16 overflow-hidden bg-grey-900">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <img 
-            src="/images/hero/coletivo-coworking-area51-hero.jpg" 
+            src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/03/Design-sem-nome-4.jpg" 
             alt="Espaços Coletivo" 
             className="w-full h-full object-cover opacity-20 scale-105"
           />
@@ -108,7 +108,7 @@ export default function Espacos() {
             <div className="reveal relative" style={{ transitionDelay: '.2s' }}>
               <div className="aspect-[4/5] rounded-[3.5rem] overflow-hidden shadow-2xl border-[12px] border-grey-50">
                 <img 
-                  src="/images/hero/coletivo-coworking-espacos-hero.jpg" 
+                  src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/6.jpg" 
                   alt="Escritório Privativo Coletivo" 
                   className="w-full h-full object-cover transition-all duration-[2s] ease-out scale-105"
                 />
@@ -130,7 +130,7 @@ export default function Espacos() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
             <div className="reveal order-2 lg:order-1 relative h-[500px] rounded-[3rem] overflow-hidden">
                <img 
-                  src="/images/hero/coletivo-coworking-area51-hero.jpg" 
+                  src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/03/Design-sem-nome-4.jpg" 
                   alt="Salas de Time Coletivo" 
                   className="w-full h-full object-cover"
                 />
@@ -221,14 +221,14 @@ export default function Espacos() {
               </div>
             </div>
             <div className="reveal aspect-video rounded-[3rem] overflow-hidden shadow-2xl border border-white/5">
-              <img src="/images/hero/coletivo-coworking-sala-privativa-hero.jpg" alt="Estação Rotativa" className="w-full h-full object-cover opacity-60 hover:opacity-100 transition-opacity duration-1000" />
+              <img src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/1.jpg" alt="Estação Rotativa" className="w-full h-full object-cover opacity-60 hover:opacity-100 transition-opacity duration-1000" />
             </div>
           </div>
 
           {/* ESTAÇÃO FIXA */}
           <div id="estacao-fixa" className="grid grid-cols-1 lg:grid-cols-2 gap-24 xl:gap-32 items-center scroll-mt-32">
             <div className="reveal order-2 lg:order-1 aspect-video rounded-[3rem] overflow-hidden shadow-2xl border border-white/5">
-              <img src="/images/hero/coletivo-coworking-espacos-hero.jpg" alt="Espaço Resident" className="w-full h-full object-cover opacity-60 hover:opacity-100 transition-opacity duration-1000" />
+              <img src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/6.jpg" alt="Espaço Resident" className="w-full h-full object-cover opacity-60 hover:opacity-100 transition-opacity duration-1000" />
             </div>
             <div className="reveal order-1 lg:order-2 space-y-12">
               <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-normal italic">Dedicados: Mesa Fixa</div>
@@ -253,7 +253,7 @@ export default function Espacos() {
           {/* SALAS DE REUNIÃO */}
           <div id="sala-reuniao" className="grid grid-cols-1 lg:grid-cols-2 gap-24 xl:gap-32 items-center scroll-mt-32 pb-12">
             <div className="reveal order-2 lg:order-1 aspect-video rounded-[3rem] overflow-hidden shadow-2xl border border-white/5">
-              <img src="/images/galeria/coletivo-coworking-espaco-interno-01.jpg" alt="Salas de Reunião" className="w-full h-full object-cover opacity-60 hover:opacity-100 transition-opacity duration-1000" />
+              <img src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/2.jpg" alt="Salas de Reunião" className="w-full h-full object-cover opacity-60 hover:opacity-100 transition-opacity duration-1000" />
             </div>
             <div className="reveal order-1 lg:order-2 space-y-12">
               <div className="text-brand text-[0.7rem] uppercase tracking-[0.5em] font-sans font-normal italic">Reuniões: Salas Profissionais</div>

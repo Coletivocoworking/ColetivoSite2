@@ -49,7 +49,7 @@ export default function PrivativoStartup() {
       <section className="relative min-h-screen flex items-center pt-32 pb-20 px-6 md:px-16 overflow-hidden bg-grey-900">
         <div className="absolute inset-0 z-0 h-full w-full overflow-hidden">
           <img 
-            src="/images/hero/coletivo-coworking-sala-privativa-hero.jpg" 
+            src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/1.jpg" 
             alt="Escritórios Privativos Startup" 
             className="w-full h-full object-cover opacity-20 scale-105"
           />
@@ -119,7 +119,7 @@ export default function PrivativoStartup() {
           <div className="reveal relative">
             <div className="aspect-[4/5] rounded-[4rem] overflow-hidden shadow-2xl relative border-[12px] border-grey-50 group">
               <img 
-                src="/images/hero/coletivo-coworking-sala-privativa-hero.jpg" 
+                src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/1.jpg" 
                 alt="Startup Suite" 
                 className="w-full h-full object-cover transition-all duration-[2s] ease-out group-hover:scale-105"
               />

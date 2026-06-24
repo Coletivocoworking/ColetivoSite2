@@ -38,7 +38,7 @@ export default function Empresas() {
       <section id="empresas-hero" className="relative min-h-[80vh] flex items-center justify-center px-6 pt-32 pb-24 bg-grey-900 overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="/images/hero/coletivo-coworking-porto-alegre-hero.jpg" 
+            src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2023/03/IMG_0571_edit-scaled.jpg" 
             className="w-full h-full object-cover opacity-40 scale-105"
             alt="Ambiente de Coworking do Coletivo"
           />
@@ -216,7 +216,7 @@ export default function Empresas() {
             <div className="lg:col-span-12 xl:col-span-7 reveal">
               <div className="aspect-[16/10] rounded-[3rem] overflow-hidden shadow-2xl relative group">
                 <img 
-                  src="/images/galeria/coletivo-area51-espaco-coworking-06.jpg" 
+                  src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2026/05/AREA_51_0495-2-scaled.jpg" 
                   className="w-full h-full object-cover transition-transform duration-[2s] ease-out group-hover:scale-105"
                   alt="Lounge do Coletivo"
                 />
@@ -282,7 +282,7 @@ export default function Empresas() {
           <div className="reveal relative" style={{ transitionDelay: '.2s' }}>
             <div className="aspect-[4/5] overflow-hidden rounded-xl">
               <img 
-                src="/images/stock/coletivo-sala-reuniao-profissional.jpg" 
+                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80" 
                 alt="Ativação de Marcas" 
                 className="w-full h-full object-cover"
               />

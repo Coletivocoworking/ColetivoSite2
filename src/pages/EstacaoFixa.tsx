@@ -50,7 +50,7 @@ export default function EstacaoFixa() {
       <section className="relative min-h-screen flex items-center pt-32 pb-20 px-6 md:px-16 overflow-hidden bg-grey-900">
         <div className="absolute inset-0 z-0 h-full w-full overflow-hidden">
           <img 
-            src="/images/hero/coletivo-coworking-espacos-hero.jpg" 
+            src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/6.jpg" 
             alt="Estação Fixa Coletivo" 
             className="w-full h-full object-cover opacity-20 scale-105"
           />
@@ -114,7 +114,7 @@ export default function EstacaoFixa() {
           <div className="reveal relative">
             <div className="aspect-square rounded-[4rem] overflow-hidden shadow-2xl relative border-[12px] border-grey-50">
               <img 
-                src="/images/hero/coletivo-coworking-espacos-hero.jpg" 
+                src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/6.jpg" 
                 alt="Detalhe Estação Fixa" 
                 className="w-full h-full object-cover transition-all duration-[2s] ease-out scale-105"
               />
@@ -170,7 +170,7 @@ export default function EstacaoFixa() {
           <div className="reveal relative order-2 lg:order-1">
             <div className="aspect-[4/5] rounded-[4rem] overflow-hidden shadow-2xl relative group">
               <img 
-                src="/images/galeria/coletivo-coworking-espaco-interno-05.jpg" 
+                src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2022/12/Rectangle-67.jpg" 
                 alt="Bem-estar Resident" 
                 className="w-full h-full object-cover transition-all duration-[2s] group-hover:scale-105"
               />

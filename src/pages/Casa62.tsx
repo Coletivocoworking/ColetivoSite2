@@ -20,10 +20,10 @@ export default function Casa62() {
   }, []);
 
   const galleries = [
-    "/images/hero/coletivo-coworking-espacos-hero.jpg",
-    "/images/galeria/coletivo-coworking-espaco-interno-01.jpg",
-    "/images/hero/coletivo-coworking-area51-hero.jpg",
-    "/images/hero/coletivo-coworking-sala-privativa-hero.jpg"
+    "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/6.jpg",
+    "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/2.jpg",
+    "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/03/Design-sem-nome-4.jpg",
+    "https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/1.jpg"
   ];
 
   return (
@@ -32,7 +32,7 @@ export default function Casa62() {
       <section className="relative min-h-screen flex items-center pt-32 pb-20 px-6 md:px-16 overflow-hidden bg-black text-white">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/images/hero/coletivo-coworking-espacos-hero.jpg" 
+            src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/6.jpg" 
             alt="Casa 62" 
             className="w-full h-full object-cover opacity-40 scale-105"
           />
@@ -90,7 +90,7 @@ export default function Casa62() {
             <div className="absolute -inset-8 bg-brand/5 rounded-[4rem] rotate-3 group-hover:rotate-0 transition-all duration-[2s] ease-out" />
             <div className="relative rounded-[3.5rem] overflow-hidden shadow-2xl">
               <img 
-                src="/images/galeria/coletivo-coworking-espaco-interno-01.jpg" 
+                src="https://lavender-dugong-488889.hostingersite.com/wp-content/uploads/2025/06/2.jpg" 
                 alt="Interior Casa 62" 
                 className="w-full aspect-[4/5] object-cover transition-all duration-[2s] group-hover:scale-[1.05]"
               />
